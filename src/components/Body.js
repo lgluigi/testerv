@@ -14,7 +14,7 @@ const Body = (props) => {
 
     <div className={style.Body__car}><img src={car} alt={'Model R'}/></div>
 
-    <div className={style.Body__btn}>
+    <div className={style.Body__btn} >
       <h2>BEGIN <img src={arrow} alt={arrow}></img></h2>
     </div>
 

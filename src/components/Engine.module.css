@@ -1,0 +1,84 @@
+.Engine {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  margin: auto;
+  width: 80vw;
+}
+
+.Engine__infos {
+  width: 30vw;
+  margin-top: 5vh;
+}
+
+.Engine__infos > .box {
+  display: flex;
+  background-color: #FFFFFF;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.Engine__infos > .box > .model, .Engine__infos > .box > .kwh, .Engine__infos > .box > .miles {
+  opacity: 0.4;
+}
+
+.Engine__infos > .title {
+  margin-bottom: 6vh;
+  font-weight: 100;
+  font-size: 38px;
+}
+
+.Engine__infos > .box {
+  height: 9vh;
+  padding: 25px;
+  align-items: center;
+  line-height: 4vh;
+  margin-bottom: 5vh;
+  cursor: pointer;
+}
+
+.Engine__infos > .box > .model:after {
+  content: "P";
+  color: #AB1725;
+
+}
+
+.Engine__infos > .box > .kwh {
+  font-size: 18px;
+}
+
+.Engine__infos > .box > .kwh:after {
+  content: "kWh";
+  font-weight: 100;
+}
+
+.Engine__infos > .box > .miles {
+  font-size: 18px;
+}
+
+.Engine__infos > .box > .miles:after {
+  content: "miles range";
+  font-weight: 100;
+}
+
+.Engine__infos > .box > .dot {
+  border: 10px #f2f2f2 solid;
+  border-radius: 360px;
+}
+
+.Engine__infos > .box:active > .dot {
+  border: 10px #AB1725 solid;
+  border-radius: 360px;
+}
+
+.Engine__infos > .box:active > .model, .Engine__infos > .box:active > .kwh, .Engine__infos > .box:active > .miles {
+  opacity: 1;
+}
+
+.Engine__infos > .box:nth-child(3) > .model:after {
+  content: "S";
+}
+
+.Engine__infos > .box:nth-child(4) > .model:after {
+  content: "B";
+}

@@ -1,14 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Saira+Condensed');
-
-* {
-  box-sizing: border-box;
-}
-
 .Body {
   display: flex;
   margin-right: 30%;
   flex-flow: column wrap;
-  font-family: 'Saira Condensed', sans-serif;
 }
 
 .Body__wrapper {
@@ -55,7 +48,7 @@
 
 .Body__btn:active {
   border-bottom: 2px #0F1C2D solid;
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .Body__infos {

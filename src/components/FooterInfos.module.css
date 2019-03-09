@@ -1,0 +1,84 @@
+.Footer {
+  position: fixed;
+  display: flex;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  background-color: #FFFFFF;
+  color: white;
+  height: 8vh;
+}
+
+.Footer__infos {
+  display: flex;
+  margin: auto;
+  width: 75vw;
+  flex-flow: row nowrap;
+  color: black;
+}
+
+.model {
+  font-weight: 100;
+}
+
+.Footer__infos > .kwh {
+  font-size: 18px;
+  height: auto;
+  line-height: 3vh;
+}
+
+.Footer__infos > .kwh:after {
+  content: "R";
+  color:#AB1725;
+}
+
+.wheel {
+  transform: scale(0.5);
+  height: 10vh;
+  margin-top: -0.6%;
+}
+
+.Footer__infos > .color {
+  transform: scaleY(0.3);
+  transform: scaleX(0.3);
+  height: 4vh;
+  margin-top: 1.4%;
+}
+
+.Footer__infos > .price:nth-child(1) {
+  line-height: 0.5vh;
+}
+
+.Footer__infos > .price > h1 {
+  color:#AB1725;
+  font-weight: 200;
+}
+
+.Footer__infos > * {
+  align-self: flex-start;
+  height: 10vh;
+  width: 8%;
+  line-height: 4vh;
+}
+
+.Footer__infos > *:nth-child(n+2) {
+  margin-left: 5vw;
+}
+
+.Footer__btn {
+  color: black;
+  align-self: flex-end;
+  display: flex;
+  margin: auto;
+  width: 1vw;
+  cursor: pointer;
+}
+
+.Footer__btn > h2 {
+  font-weight: 200;
+  margin-right: 1vw;
+}
+
+.Footer__btn:active {
+  font-size: 17px;
+}
