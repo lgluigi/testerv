@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Saira+Condensed');
+
+.NavBar {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 1%;
+  width: 95%;
+  height: 11vh;
+  justify-content: space-around;
+  font-family: 'Saira Condensed', sans-serif;
+}
+
+.NavBar__ul {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-left: 20%;
+  list-style: none;
+  width: 30%;
+  height: auto;
+  justify-content: space-between;
+}
+
+.NavBar__btn {
+  width: 4vw;
+  text-align: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.NavBar__btn:hover {
+  border-bottom: 2px #0F1C2D solid;
+  opacity: 1;
+}
+
+
+.NavBar__btn:active {
+  border-bottom: 2px #AB1725 solid;
+  font-size: 20px;
+}
