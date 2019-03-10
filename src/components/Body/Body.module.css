@@ -46,9 +46,13 @@
   border-bottom: 2px #AB1725 solid;
 }
 
-.Body__btn:active {
-  border-bottom: 2px #0F1C2D solid;
-  font-size: 18px;
+.Body__btn > h2 > img {
+  transition: margin-left .2s ease;
+  will-change: margin-left;
+}
+
+.Body__btn:active > h2 > img {
+  margin-left: 10px;
 }
 
 .Body__infos {
@@ -90,3 +94,8 @@
   opacity: 0.7;
   font-weight: 200;
 }
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { /* STYLES GO HERE */}

@@ -5,9 +5,9 @@ import Dot from './../../assets/dot-red.png';
 import Wheel from './../../assets/wheel-metalic.png';
 
 let selection = {
+  engine: false,
   color: false,
-  wheel: false,
-  engine: false
+  wheel: false
 }
 
 const FooterInfos = (props) => {

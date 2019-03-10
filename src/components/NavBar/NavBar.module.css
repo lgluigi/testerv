@@ -32,6 +32,7 @@
   white-space: nowrap;
   cursor: pointer;
   opacity: 0.6;
+  transition: all .2s ease;
 }
 
 .NavBar__btn:hover {
@@ -44,3 +45,7 @@
   border-bottom: 2px #AB1725 solid;
   font-size: 14px;
 }
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { /* STYLES GO HERE */}

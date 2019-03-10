@@ -1,1 +1,28 @@
- 
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { /* STYLES GO HERE */} 
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) { /* STYLES GO HERE */}
+
+.Color {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row nowrap;
+  margin: auto;
+  width: 90vw;
+}
+
+.Color__selection > div {
+  display: flex;
+  border-radius: 360px;
+  height: auto;
+  width: 4vw;
+  background-color: #FFFFFF;
+}
+
+.Color__option {
+
+}

@@ -18,8 +18,10 @@
   justify-content: space-between;
 }
 
-.Engine__infos > .box > .model, .Engine__infos > .box > .kwh, .Engine__infos > .box > .miles {
+.Engine__infos > .box {
   opacity: 0.4;
+  transition: opacity .2s ease;
+  will-change: opacity;
 }
 
 .Engine__infos > .title {
@@ -71,7 +73,7 @@
   border-radius: 360px;
 }
 
-.Engine__infos > .box:active > .model, .Engine__infos > .box:active > .kwh, .Engine__infos > .box:active > .miles {
+.Engine__infos > .box:active {
   opacity: 1;
 }
 
@@ -82,3 +84,7 @@
 .Engine__infos > .box:nth-child(4) > .model:after {
   content: "B";
 }
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { /* STYLES GO HERE */}
