@@ -1,5 +1,5 @@
 import React from 'react';
-import * as style from './Wheels.module.css';
+import * as style from './module.css';
 
 const Wheels = (props) => {
   return <div>

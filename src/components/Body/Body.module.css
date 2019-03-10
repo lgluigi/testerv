@@ -61,32 +61,32 @@
   justify-content: space-evenly;
 }
 
-.Body__infos > div {
+.Body__infos > .info {
   border-bottom: 3px #AB1725 solid;
   width: 5vw;
   line-height: 1px;
 }
 
-.Body__infos > div > h2 {
+.Body__infos > .info > h2 {
   color: #AB1725;
 }
 
-.Body__infos > div:nth-child(1) > h2:after {
+.Body__infos > .info:nth-child(1) > h2:after {
   content: "s";
   font-size: 15px;
 }
 
-.Body__infos > div:nth-child(2) > h2:after {
+.Body__infos > .info:nth-child(2) > h2:after {
   content: "mi";
   font-size: 15px;
 }
 
-.Body__infos > div:nth-child(3) > h2:after {
+.Body__infos > .info:nth-child(3) > h2:after {
   content: "mp/h";
   font-size: 15px;
 }
 
-.Body__infos > div > h4 {
+.Body__infos > .info > h4 {
   opacity: 0.7;
   font-weight: 200;
 }

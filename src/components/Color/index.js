@@ -1,5 +1,5 @@
 import React from 'react';
-import * as style from './Color.module.css';
+import * as style from './module.css';
 
 const Color = (props) => {
   return <div>

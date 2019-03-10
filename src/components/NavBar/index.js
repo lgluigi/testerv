@@ -1,6 +1,6 @@
 import React from 'react';
 import * as style from './NavBar.module.css';
-import logo from './../assets/RV-logo.svg';
+import logo from './../../assets/RV-logo.svg';
 
 const NavBar = (props) => {
   return <div className={style.NavBar}>

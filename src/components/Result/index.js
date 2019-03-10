@@ -1,5 +1,5 @@
 import React from 'react';
-import * as style from './Result.module.css';
+import * as style from './module.css';
 
 const Result = (props) => {
   return <div>

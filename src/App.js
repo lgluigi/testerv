@@ -6,13 +6,15 @@ import FooterInfos from './components/FooterInfos';
 
 import './index.css';
 
+let hasStarted = false;
+
 class App extends Component {
     render() {
         return (
             <div style={{ backgroundColor: '#F2F2F2', height: '100vh'}}>
                 <NavBar />
-                <Engine />
-                <FooterInfos />
+                {hasStarted ? <Engine /> : <Body />}
+                {hasStarted ? <FooterInfos /> : null}
             </div>
         )
     }
