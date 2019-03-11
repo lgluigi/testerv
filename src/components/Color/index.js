@@ -6,19 +6,20 @@ import blue from './../../assets/dot-blue.png';
 import grey from './../../assets/dot-grey.png';
 
 const Color = (props) => {
-  return <div className={style.Color}>
+  return(
+  <div className={style.Color}>
 
     <div className={style.Color__img}>
       <img src={car} alt={'Metallic Vermilion'} />
-      <h2>Metalic Vermilion</h2>
-      <h2>Included</h2>
+      <h2 className={style.color}>{`Metalic Vermilion`}</h2>
+      <h2 className={style.price}>{`Included`}</h2>
     </div>
 
     <div className={style.Color__selection}>
       <h1>Color</h1>
       <p>
-        The 2019 Model R have 3 unique metalic color options. Each color was meticulously
-        developed to look like something completely new to your eyes.
+        {`The 2019 Model R have 3 unique metalic color options. Each color was meticulously
+        developed to look like something completely new to your eyes.`}
       </p>
       <div>
           <div className={style.Color__option} ><img src={red} alt={'Red'} /></div>
@@ -27,6 +28,7 @@ const Color = (props) => {
       </div>
     </div>
   </div>
+  )
 };
 
 export default Color;

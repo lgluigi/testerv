@@ -9,16 +9,20 @@
   display: flex;
   flex-flow: row nowrap;
   padding: 1%;
-  width: 95vw;
+  width: 90vw;
   height: 11vh;
   justify-content: space-around;
   font-family: 'Saira Condensed', sans-serif;
 }
 
+.NavBar__logo {
+  width: 150px;
+}
+
 .NavBar__ul {
   display: flex;
   flex-flow: row nowrap;
-  margin-left: 20%;
+  margin-left: 15%;
   list-style: none;
   width: 30vw;
   height: auto;
@@ -28,7 +32,6 @@
 .NavBar__btn {
   width: 4vw;
   text-align: center;
-  box-sizing: border-box;
   white-space: nowrap;
   cursor: pointer;
   opacity: 0.6;

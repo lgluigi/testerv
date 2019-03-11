@@ -1,3 +1,54 @@
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)  { /* STYLES GO HERE */}
+
+
+.Wheels {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: auto;
+  width: 50vw;
+
+}
+
+.Wheel__container {
+  margin-top: 10vh;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in;
+  will-change: opacity;
+  cursor: pointer;
+}
+
+.Wheel__container:hover > .model,
+.Wheel__container:hover > .price {
+  opacity: 0.5;
+}
+
+.Wheel__container:active,
+.Wheel__container:active > .model,
+.Wheel__container:active > .price {
+  opacity: 1;
+}
+
+.model,
+.price {
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+  will-change: opacity;
+  font-weight: 100;
+  text-align: center;
+}
+
+.model {
+  margin-top: 5vh;
+  line-height: 1px;
+}
+
+.price {
+  color: #AB1725;
+}
+
+.Wheels__wheel {
+  width: 14vw;
+}

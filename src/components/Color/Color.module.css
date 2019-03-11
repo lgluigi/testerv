@@ -9,20 +9,54 @@ and (-webkit-device-pixel-ratio : 3) { /* STYLES GO HERE */}
 
 .Color {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-flow: row nowrap;
   margin: auto;
   width: 90vw;
 }
 
-.Color__selection > div {
-  display: flex;
-  border-radius: 360px;
-  height: auto;
-  width: 4vw;
-  background-color: #FFFFFF;
+.Color__img {
+  margin: 10vh 8vw 0vh 0vh;
 }
 
-.Color__option {
+.price {
+  color: #AB1725;
+}
 
+.Color__selection > div {
+  display: flex;
+  height: auto;
+  justify-content: space-around;
+  margin-top: 10vh;
+}
+
+.Color__selection > p {
+  width: 30vw;
+}
+
+.Color__selection > h1,
+.Color__img > h2 
+{
+  font-weight: 200;
+}
+
+
+.Color__option {
+  border: 10px #FFFFFF solid;
+  border-radius: 50%;
+  height: 6vh;
+  transition: all .2s ease-in;
+  cursor: pointer;
+}
+
+.Color__option:active {
+  border-color: #2E3948;
+}
+
+.Color__option:hover {
+  transform: scale(1.1);
+}
+
+.Color__option > img {
+  width: 2vw;
 }

@@ -42,6 +42,7 @@
 .Engine__infos > .box > .model:after {
   content: "P";
   color: #AB1725;
+  font-weight: bold;
 
 }
 
@@ -51,7 +52,7 @@
 
 .Engine__infos > .box > .kwh:after {
   content: "kWh";
-  font-weight: 100;
+  font-weight: 100; 
 }
 
 .Engine__infos > .box > .miles {

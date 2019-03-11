@@ -11,14 +11,15 @@ let selection = {
 }
 
 const FooterInfos = (props) => {
-  return <div className={style.Footer}>
+  return(
+   <div className={style.Footer}>
     <div className={style.Footer__infos}>
       <div className={style.price}>
         <p>Total</p>
-        <h1>$63.000</h1>
+        <h1>{`$63.000`}</h1>
       </div>
       <h3 className={style.model}>Model R</h3>
-      {selection.engine ? <h4 className={style.kwh}>75 </h4> : null}
+      {selection.engine ? <h4 className={style.kwh}>{`75`} </h4> : null}
       {selection.color ? <img className={style.color} src={Dot} alt={'color'} /> : null}
       {selection.wheel ? <img className={style.wheel} src={Wheel} alt={'wheel'} /> : null}
     </div>
@@ -27,6 +28,7 @@ const FooterInfos = (props) => {
       <img src={Arrow} alt={'arrow'}/>
     </div>
   </div>
+  )
 };
 
 export default FooterInfos;

@@ -1,3 +1,73 @@
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)  { /* STYLES GO HERE */}
+
+.Result {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 10vh 5vw 5vh 5vw;
+  justify-content: center;
+  width: 90vw;
+}
+
+.title {
+  font-weight: 100;  
+}
+
+.title:after {
+  content: "R";
+  color: #AB1725;
+  font-weight: bold;
+}
+
+.Result__car {
+  width: 25vw;
+  height: 25vh;
+  margin: 15vh 10vw 5vh 5vw;
+}
+
+.Result__infos {
+  width: 20vw;
+  margin-right: 10vw;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  width: 20vw;
+}
+
+.price {
+  width: 50%;
+  text-align: end;
+  color: #AB1725;
+}
+
+.label {
+  width: 50%;
+  text-align: start;
+  font-weight: 200;
+  white-space: nowrap;
+}
+
+.divider {
+  border: 1px lightgrey solid;
+  width: 100%;
+}
+
+.rebuild {
+  margin: 3vh 5vw 0vh 5vw;
+  text-align: center;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.rebuild > img {
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.rebuild:hover > img {
+  transform: rotate(180deg);
+}
