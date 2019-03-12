@@ -18,19 +18,28 @@ const selectWheel = (id, data) => {
 const Wheels = () => {
   return( 
     <AppContext.Consumer>
-      {({data}) => (
+      {({updateState,data}) => (
       <div className={style.Wheels}>
-        <div className={style.Wheel__container}>
+        <div className={style.Wheel__container} onClick={() => updateState({
+          wheels: selectWheel(0, data),
+
+        })}>
           <img src={Metallic} alt={data.wheels.item[0].label} className={style.Wheels__wheel} />
           <h2 className={style.model}>{data.wheels.item[0].label}c</h2>
           <h3 className={style.price}>{data.wheels.wheels[0].price === 0 ? 'Included' : null}</h3>
         </div>
-        <div className={style.Wheel__container}>
+        <div className={style.Wheel__container} onClick={() => updateState({
+          wheels: selectWheel(1, data),
+
+        })}>
           <img src={Grafitti} alt={data.wheels.item[0].label} className={style.Wheels__wheel} />
           <h2 className={style.model}>{data.wheels.item[1].label}</h2>
           <h3 className={style.price}>+${data.wheels.wheels[1].price}</h3>
         </div>
-        <div className={style.Wheel__container}>
+        <div className={style.Wheel__container} onClick={() => updateState({
+          wheels: selectWheel(2, data),
+          
+        })}>
           <img src={Carbon} alt={data.wheels.item[0].label} className={style.Wheels__wheel} />
           <h2 className={style.model}>{data.wheels.item[2].label}</h2>
           <h3 className={style.price}>+${data.wheels.wheels[2].price}</h3>

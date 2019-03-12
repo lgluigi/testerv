@@ -9,12 +9,12 @@ import AppContext from './../../AppContext';
 const FooterInfos = () => {
   return(
     <AppContext.Consumer>
-      {({updateState, data, engine, totalValue, selected, nextStep}) => (
+      {({updateState, data, engine, totalValue, selected, nextStep, stagingValue}) => (
       <div className={style.Footer}>
         <div className={style.Footer__infos}>
           <div className={style.price}>
             <p>Total</p>
-            <h1>${totalValue}</h1>
+            <h1>${totalValue + stagingValue}</h1>
           </div>
           <h3 className={style.model}>Model R</h3>
           {selected.engine ? 
@@ -30,7 +30,9 @@ const FooterInfos = () => {
           onClick={
           selected.step ? () => updateState({
             step: nextStep,
-            selected: {step: false}
+            selected: {step: false},
+            totalValue: totalValue += stagingValue,
+            stagingValue: 0
           }) : null}>
           <h2>next</h2>
           <img src={Arrow} alt={'arrow'}/>

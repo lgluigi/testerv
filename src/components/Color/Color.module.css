@@ -41,7 +41,8 @@ and (-webkit-device-pixel-ratio : 3) { /* STYLES GO HERE */}
 }
 
 
-.Color__option {
+.Color__option,
+.Color__option__active {
   border: 10px #FFFFFF solid;
   border-radius: 50%;
   height: 6vh;
@@ -49,11 +50,13 @@ and (-webkit-device-pixel-ratio : 3) { /* STYLES GO HERE */}
   cursor: pointer;
 }
 
-.Color__option:active {
+.Color__option:active,
+.Color__option__active {
   border-color: #2E3948;
 }
 
-.Color__option:hover {
+.Color__option:hover,
+.Color__option__active {
   transform: scale(1.1);
 }
 
