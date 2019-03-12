@@ -1,3 +1,13 @@
+## Requirement
+
+To install and run this app you must have yarn installed 
+
+to install yarn use
+
+```bash
+npm i yarn
+```
+
 ## Installation
 
 To install the APP use

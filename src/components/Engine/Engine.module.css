@@ -11,26 +11,32 @@
   margin-top: 5vh;
 }
 
-.Engine__infos > .box {
+.Engine__img {
+  width: 23%;
+  height: 45%;
+}
+
+.box {
   display: flex;
   background-color: #FFFFFF;
   flex-flow: row nowrap;
   justify-content: space-between;
-}
-
-.Engine__infos > .box {
   opacity: 0.4;
+  height: 9vh;
+  padding: 25px;
+  align-items: center;
+  line-height: 4vh;
+  margin-bottom: 5vh;
+  cursor: pointer;
   transition: opacity .2s ease;
   will-change: opacity;
 }
 
-.Engine__infos > .title {
-  margin-bottom: 6vh;
-  font-weight: 100;
-  font-size: 38px;
-}
-
-.Engine__infos > .box {
+.box__active{
+  display: flex;
+  background-color: #FFFFFF;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   height: 9vh;
   padding: 25px;
   align-items: center;
@@ -39,53 +45,68 @@
   cursor: pointer;
 }
 
-.Engine__infos > .box > .model:after {
-  content: "P";
-  color: #AB1725;
-  font-weight: bold;
-
-}
-
-.Engine__infos > .box > .kwh {
-  font-size: 18px;
-}
-
-.Engine__infos > .box > .kwh:after {
-  content: "kWh";
-  font-weight: 100; 
-}
-
-.Engine__infos > .box > .miles {
-  font-size: 18px;
-}
-
-.Engine__infos > .box > .miles:after {
-  content: "miles range";
-  font-weight: 100;
-}
-
-.Engine__infos > .box > .dot {
-  border: 10px #f2f2f2 solid;
-  border-radius: 360px;
-}
-
-.Engine__infos > .box:active > .dot {
+.box__active > .dot {
   border: 10px #AB1725 solid;
   border-radius: 360px;
 }
 
-.Engine__infos > .box:active {
-  opacity: 1;
+.Engine__infos > .title {
+  margin-bottom: 6vh;
+  font-weight: 100;
+  font-size: 38px;
 }
 
-.Engine__infos > .box:nth-child(3) > .model:after {
+.model:after {
+  content: "P";
+  color: #AB1725;
+  font-weight: bold;
+}
+
+.kwh {
+  font-size: 18px;
+}
+
+.kwh:after {
+  content: "kWh";
+  font-weight: 100; 
+}
+
+.miles {
+  font-size: 18px;
+}
+
+.miles:after {
+  content: "miles range";
+  font-weight: 100;
+}
+
+.dot {
+  border: 10px #f2f2f2 solid;
+  border-radius: 360px;
+}
+
+.box:hover > .dot {
+  border: 10px #AB1725 solid;
+  border-radius: 360px;
+}
+
+.box:hover {
+  opacity: 0.6;
+}
+
+.Engine__infos > div:nth-child(3) > .model:after {
   content: "S";
 }
 
-.Engine__infos > .box:nth-child(4) > .model:after {
+.Engine__infos > div:nth-child(4) > .model:after {
   content: "B";
 }
 
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)  { /* STYLES GO HERE */}
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3) { /* STYLES GO HERE */}
