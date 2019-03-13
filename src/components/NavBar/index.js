@@ -2,7 +2,7 @@ import React from 'react';
 import * as style from './NavBar.module.css';
 import logo from './../../assets/RV-logo.svg';
 
-const NavBar = (props) => {
+const NavBar = () => {
   return(
   <div className={style.NavBar}>
     <img className={style.NavBar__logo} src={logo} alt={'Red Ventures logo'} />

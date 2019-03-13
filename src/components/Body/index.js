@@ -5,8 +5,7 @@ import arrow from './../../assets/arrow.svg';
 import AppContext from './../../AppContext';
 
 
-
-const Body = (props) => {
+const Body = () => {
 
   return (
     <AppContext.Consumer>

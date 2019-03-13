@@ -6,14 +6,13 @@ export const contextState = {
   totalValue: 0,
   stagingValue: 0,
   color: {},
-  wheel: {},
+  wheels: {},
   engine: {},
   step: "",
-  selected: {step: false, engine: false, color: false, wheels: false},
+  selected: {},
   nextStep: "",
   data: null,
   updateState: ({...states}) => {}
-
 }
 
 const AppContext = React.createContext({

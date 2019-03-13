@@ -1,15 +1,21 @@
 import React from 'react';
 import * as style from './FooterInfos.module.css';
 import Arrow from './../../assets/arrow.svg';
-import Dot from './../../assets/dot-red.png';
-import Wheel from './../../assets/wheel-metalic.png';
+import red from './../../assets/dot-red.png';
+import blue from './../../assets/dot-blue.png';
+import grey from './../../assets/dot-grey.png';
 import AppContext from './../../AppContext';
+import metallic from './../../assets/wheel-metalic.png';
+import carbon from './../../assets/wheel-carbon.png';
+import grafitti from './../../assets/wheel-grafitti.png';
 
+const setWheel = [metallic, carbon, grafitti];
+const setColor = [red, blue, grey];
 
 const FooterInfos = () => {
   return(
     <AppContext.Consumer>
-      {({updateState, data, engine, totalValue, selected, nextStep, stagingValue}) => (
+      {({updateState, engine, totalValue, selected, nextStep, stagingValue, color, wheels}) => (
       <div className={style.Footer}>
         <div className={style.Footer__infos}>
           <div className={style.price}>
@@ -17,20 +23,19 @@ const FooterInfos = () => {
             <h1>${totalValue + stagingValue}</h1>
           </div>
           <h3 className={style.model}>Model R</h3>
-          {selected.engine ? 
-            <h4 className={style.kwh}>{engine.kwh} 
-              <p className={style.type}>{engine.type}</p>
-            </h4> : null
-          }
-          {selected.color ? <img className={style.color} src={Dot} alt={'color'} /> : null}
-          {selected.wheels ? <img className={style.wheel} src={Wheel} alt={'wheel'} /> : null}
+          {selected.engine && 
+          <h4 className={style.kwh}>{engine.kwh} 
+          <p className={style.type}>{engine.type}</p></h4>}
+          {selected.color && <img className={style.color} src={setColor[color.id]} alt={'color'} />}
+          {selected.wheels && <img className={style.wheel} src={setWheel[wheels.id]} alt={'wheel'} />}
+          {console.log(selected)}
         </div>
-        <div className={style.Footer__btn} 
 
+        <div className={style.Footer__btn} 
           onClick={
           selected.step ? () => updateState({
             step: nextStep,
-            selected: {step: false},
+            selected: {...selected, step: false},
             totalValue: totalValue += stagingValue,
             stagingValue: 0
           }) : null}>

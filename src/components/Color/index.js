@@ -1,6 +1,5 @@
 import React from 'react';
 import * as style from './Color.module.css';
-import car from './../../assets/color-red.png';
 import red from './../../assets/dot-red.png';
 import blue from './../../assets/dot-blue.png';
 import grey from './../../assets/dot-grey.png';
@@ -12,15 +11,13 @@ const selectColor = (id, data) => {
     hex: data.color.items[id].hexadecimal,
     label: data.color.items[id].label,
     image: data.color.items[id].image,
-    price: data.color.items[id].price
+    price: data.color.items[id].price,
   }
 }
 
 const getColor = (id, data) => {
-  id === undefined ? id = 0 : id = id;
-  return data.color.items[id]
+  return id === undefined ?  data.color.items[0] : data.color.items[id];
 }
-
 
 const Color = () => {
   return(
@@ -40,28 +37,28 @@ const Color = () => {
         <div className={style.Color__selection}>
           <h1>Color</h1>
           <p>
-            {data.color.items.description}
+            {data.color.description}
           </p>
           <div>
               <div className={style.Color__option} onClick={() => updateState({
                 color: selectColor(0, data),
-                selected: {step: true, color: true},
-                nextStep: 'wheels',
-                stagingValue: getColor(0, data).price
+                stagingValue: getColor(color.id, data).price,
+                selected: {...selected, step: true, color: true},
+                nextStep: 'wheels'
               })}><img src={red}  alt={getColor(0, data).label} /></div>
 
               <div className={style.Color__option} onClick={() => updateState({
                 color: selectColor(1, data),
-                selected: {step: true, color: true},
+                stagingValue: getColor(color.id, data).price,
+                selected: {...selected, step: true, color: true},
                 nextStep: 'wheels',
-                stagingValue: getColor(1, data).price
               })}><img src={blue} alt={getColor(1, data).label} /></div>
 
               <div className={style.Color__option} onClick={() => updateState({
                 color: selectColor(2, data),
-                selected: {step: true, color: true},
+                stagingValue: getColor(color.id, data).price,
+                selected: {...selected, step: true, color: true},
                 nextStep: 'wheels',
-                stagingValue: getColor(2, data).price
               })}><img src={grey} alt={getColor(2, data).label} /></div>
           </div>
         </div>
