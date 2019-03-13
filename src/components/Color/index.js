@@ -25,9 +25,7 @@ const Color = () => {
     {({data, updateState, color, selected}) => (
       <div className={style.Color}>
         <div className={style.Color__img}>
-          <img 
-          src={getColor(color.id, data).image} 
-          alt={getColor(color.id, data).label} />
+          <img src={getColor(color.id, data).image} alt={getColor(color.id, data).label} />
           <h2 className={style.color}>{getColor(color.id, data).label}</h2>
           <h2 className={style.price}>
             {getColor(color.id, data).price === 0 ? 'Included' : `+$${getColor(color.id, data).price}`}

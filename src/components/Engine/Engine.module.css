@@ -12,11 +12,12 @@
 }
 
 .Engine__img {
-  width: 23%;
-  height: 45%;
+  width: 20vmax;
+  height: 35vmax;
 }
 
-.box {
+.box,
+.box__active {
   display: flex;
   background-color: #F2F2F2;
   flex-flow: row nowrap;
@@ -33,18 +34,8 @@
   user-select: none;
 }
 
-.box__active{
-  display: flex;
-  background-color: #F2F2F2;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  height: 5vh;
-  padding: 25px;
-  align-items: center;
-  line-height: 4vh;
-  margin-bottom: 5vh;
-  cursor: pointer;
-  user-select: none;
+.box__active {
+  opacity: 1;
 }
 
 .box__active > .dot {
@@ -106,7 +97,65 @@
 
 @media only screen 
 and (min-device-width : 768px) 
-and (max-device-width : 1024px)  { /* STYLES GO HERE */}
+and (max-device-width : 1024px)  { 
+
+  .Engine {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin: auto;
+    width: 90vw;
+  }
+  
+  .Engine__infos {
+    width: 50vw;
+    margin-top: 5vh;
+  }
+  
+  .Engine__img {
+    margin: auto;
+    width: 40%;
+    height: 50%;
+  }
+  
+  .box,
+  .box__active {
+    display: flex;
+    background-color: #F2F2F2;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    opacity: 0.4;
+    height: 5vh;
+    padding: 25px;
+    align-items: center;
+    line-height: 4vh;
+    margin-bottom: 5vh;
+    cursor: pointer;
+    transition: opacity .2s ease;
+    will-change: opacity;
+    user-select: none;
+  }
+  
+  .box__active {
+    opacity: 1;
+  }
+  
+  .box__active > .dot {
+    border: 10px #AB1725 solid;
+    border-radius: 360px;
+  }
+  
+  .Engine__infos > .title {
+    margin-bottom: 6vh;
+    font-weight: 100;
+    font-size: 34px;
+  }
+  
+  .dot {
+    border: 10px #f2f2f2 solid;
+    border-radius: 360px;
+  }
+}
 
 @media only screen 
 and (min-device-width : 375px) 

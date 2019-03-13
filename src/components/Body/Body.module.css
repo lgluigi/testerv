@@ -68,8 +68,9 @@
 
 .Body__infos > .info {
   border-bottom: 3px #AB1725 solid;
-  width: 5vw;
-  height: 11vh;
+  width: 7vw;
+  height: 8vh;
+  line-height: 1px;
 }
 
 .Body__infos > .info > h2 {
@@ -100,9 +101,68 @@
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)  { 
-
-
-
+  .Body {
+    display: flex;
+    margin-right: 20%;
+    flex-flow: column wrap;
+  }
+  
+  .Body__wrapper {
+    margin: -5% 0% 0% 30%;
+  }
+  
+  .Body__h3 {
+    font-size: 62px;
+    font-weight: 100;
+    color:#AB1725;
+    margin:5% 0% -2% 31%;
+  }
+  
+  .Body__h1 {
+    font-size: 132px;
+    font-weight: 100;
+  }
+  
+  .Body__car {
+    margin: 5% 0% 0% 10%;
+    transform: scale(0.9);
+  }
+  
+  .Body__btn {
+    width: 13vw;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+    line-height: 1px;
+    margin: 0% 0% 0% 55%;
+    height: 6vh;
+    cursor: pointer;
+    white-space: nowrap;
+    user-select: none;
+    border: 2px #FFFFFF solid;
+  }
+  
+  .Body__btn > h2 > img {
+    transition: margin-left .2s ease;
+    will-change: margin-left;
+  }
+  
+  .Body__btn:hover > h2 > img {
+    margin-left: 10px;
+  }
+  
+  .Body__infos {
+    width: 100vw;
+    margin: auto;
+  }
+  
+  .Body__infos > .info {
+    margin-top: 6vh;
+    border-bottom: 3px #AB1725 solid;
+    width: 12vw;
+    height: 6.5vh;
+    line-height: 1px;
+  }
 
 }
 

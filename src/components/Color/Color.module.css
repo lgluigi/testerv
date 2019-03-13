@@ -10,7 +10,7 @@ and (-webkit-device-pixel-ratio : 3) { /* STYLES GO HERE */}
 .Color {
   display: flex;
   justify-content: center;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   margin: auto;
   width: 90vw;
 }
@@ -43,6 +43,7 @@ and (-webkit-device-pixel-ratio : 3) { /* STYLES GO HERE */}
 
 .Color__option,
 .Color__option__active {
+  margin: auto;
   border: 10px #FFFFFF solid;
   border-radius: 50%;
   height: 6vh;
@@ -55,12 +56,12 @@ and (-webkit-device-pixel-ratio : 3) { /* STYLES GO HERE */}
 .Color__option__active {
   background-color: #2E3948;
   border-color: #2E3948;
+  height: 5.3vh;
 }
 
 .Color__option:hover,
 .Color__option__active {
   transform: scale(1.1);
-  height: 5.3vh;
 }
 
 .Color__option > img {

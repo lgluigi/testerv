@@ -11,6 +11,7 @@
 
 .NavBar__logo {
   width: 200px;
+  cursor: pointer;
 }
 
 .NavBar__ul {
@@ -35,7 +36,7 @@
 }
 
 .NavBar__btn:hover {
-  border-bottom: 2px #0F1C2D solid;
+  border-bottom: 2px #AB1725 solid;
   opacity: 1;
 }
 
@@ -47,7 +48,50 @@
 
 @media only screen 
 and (min-device-width : 768px) 
-and (max-device-width : 1024px)  { /* STYLES GO HERE */}
+and (max-device-width : 1024px)  { 
+  
+  .NavBar {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 1%;
+    width: 90vw;
+    margin: auto;
+    line-height: 1px;
+    height: 6vh;
+    justify-content: space-around;
+    font-family: 'Saira Condensed', sans-serif;
+  }
+  
+  .NavBar__logo {
+    width: 200px;
+  }
+  
+  .NavBar__ul {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    width: 50vw;
+    height: 5vh;
+    justify-content: space-between;
+    overflow-x: scroll;
+  }
+  
+  .NavBar__btn {
+    width: 12vw;
+    text-align: center;
+    margin-right: 7vw;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all .2s ease;
+    user-select: none;
+  }
+  
+  .NavBar__btn:active {
+    border-bottom: 2px #AB1725 solid;
+    font-size: 14px;
+    opacity: 1;
+  }
+}
 
 @media only screen 
 and (min-device-width : 375px) 
