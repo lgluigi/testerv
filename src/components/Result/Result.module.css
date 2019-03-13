@@ -66,6 +66,7 @@ and (-webkit-device-pixel-ratio : 3) { /* STYLES GO HERE */}
   font-weight: 200;
   letter-spacing: 0.5px;
   cursor: pointer;
+  user-select: none;
 }
 
 .rebuild > img {

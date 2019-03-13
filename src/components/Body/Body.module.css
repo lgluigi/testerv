@@ -33,19 +33,21 @@
 }
 
 .Body__btn {
-  width: 7vw;
+  width: 6vw;
   font-size: 20px;
   font-weight: 100;
   text-align: center;
   line-height: 1px;
-  margin: 0% 0% 0% 67%;
+  margin: 0% 0% 5% 67%;
   height: 6vh;
   cursor: pointer;
   white-space: nowrap;
+  user-select: none;
+  border: 2px #FFFFFF solid;
 }
 
 .Body__btn:hover {
-  border-bottom: 2px #AB1725 solid;
+  border-bottom-color: #AB1725;
 }
 
 .Body__btn > h2 > img {
@@ -53,24 +55,21 @@
   will-change: margin-left;
 }
 
-.Body__btn:active > h2 > img {
+.Body__btn:hover > h2 > img {
   margin-left: 10px;
 }
 
 .Body__infos {
-  margin-top: 10%;
   width: 100vw;
-  height: 6vh;
+  margin: auto;
   display: flex;
-  position: static;
-  flex-flow: row nowrap;
   justify-content: space-evenly;
 }
 
 .Body__infos > .info {
   border-bottom: 3px #AB1725 solid;
   width: 5vw;
-  line-height: 1px;
+  height: 11vh;
 }
 
 .Body__infos > .info > h2 {
@@ -100,9 +99,19 @@
 
 @media only screen 
 and (min-device-width : 768px) 
-and (max-device-width : 1024px)  { /* STYLES GO HERE */}
+and (max-device-width : 1024px)  { 
+
+
+
+
+}
 
 @media only screen 
 and (min-device-width : 375px) 
 and (max-device-width : 812px)
-and (-webkit-device-pixel-ratio : 3) { /* STYLES GO HERE */}
+and (-webkit-device-pixel-ratio : 3) { 
+
+
+
+
+}

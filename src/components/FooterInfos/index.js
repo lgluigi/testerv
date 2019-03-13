@@ -5,11 +5,7 @@ import red from './../../assets/dot-red.png';
 import blue from './../../assets/dot-blue.png';
 import grey from './../../assets/dot-grey.png';
 import AppContext from './../../AppContext';
-import metallic from './../../assets/wheel-metalic.png';
-import carbon from './../../assets/wheel-carbon.png';
-import grafitti from './../../assets/wheel-grafitti.png';
 
-const setWheel = [metallic, carbon, grafitti];
 const setColor = [red, blue, grey];
 
 const FooterInfos = () => {
@@ -27,7 +23,7 @@ const FooterInfos = () => {
           <h4 className={style.kwh}>{engine.kwh} 
           <p className={style.type}>{engine.type}</p></h4>}
           {selected.color && <img className={style.color} src={setColor[color.id]} alt={'color'} />}
-          {selected.wheels && <img className={style.wheel} src={setWheel[wheels.id]} alt={'wheel'} />}
+          {selected.wheels && <img className={style.wheel} src={wheels.image} alt={'wheel'} />}
           {console.log(selected)}
         </div>
 

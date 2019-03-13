@@ -9,7 +9,7 @@ const Body = () => {
 
   return (
     <AppContext.Consumer>
-      {({updateState, data, finalPrice}) => (
+      {({updateState, data}) => (
         <div className={style.Body}>
           <h3 className={style.Body__h3}>Build your</h3>
 

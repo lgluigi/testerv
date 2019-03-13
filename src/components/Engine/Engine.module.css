@@ -18,11 +18,11 @@
 
 .box {
   display: flex;
-  background-color: #FFFFFF;
+  background-color: #F2F2F2;
   flex-flow: row nowrap;
   justify-content: space-between;
   opacity: 0.4;
-  height: 9vh;
+  height: 5vh;
   padding: 25px;
   align-items: center;
   line-height: 4vh;
@@ -30,19 +30,21 @@
   cursor: pointer;
   transition: opacity .2s ease;
   will-change: opacity;
+  user-select: none;
 }
 
 .box__active{
   display: flex;
-  background-color: #FFFFFF;
+  background-color: #F2F2F2;
   flex-flow: row nowrap;
   justify-content: space-between;
-  height: 9vh;
+  height: 5vh;
   padding: 25px;
   align-items: center;
   line-height: 4vh;
   margin-bottom: 5vh;
   cursor: pointer;
+  user-select: none;
 }
 
 .box__active > .dot {

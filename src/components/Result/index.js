@@ -37,7 +37,7 @@ const Result = () => {
             <h2 className={style.label}>Final Price</h2>
             <h2 className={style.price}>${totalValue}</h2>
           </div>
-          <h2 onClick={() => updateState({
+          <h3 onClick={() => updateState({
             init: false,
             totalValue: 0,
             stagingValue: 0,
@@ -47,7 +47,7 @@ const Result = () => {
             step: "",
             selected: {step: false, engine: false, color: false, wheels: false},
             nextStep: ""
-          })} className={style.rebuild}>REBUILD <img src={rebuildIco} alt={'Rebuild'}/></h2>
+          })} className={style.rebuild}>REBUILD <img src={rebuildIco} alt={'Rebuild'}/></h3>
         </div>
       </div>
       )}

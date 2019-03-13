@@ -18,6 +18,7 @@ and (max-device-width : 1024px)  { /* STYLES GO HERE */}
   transition: opacity 0.3s ease-in;
   will-change: opacity;
   cursor: pointer;
+  user-select: none;
 }
 
 .Wheel__container:hover > .model,
