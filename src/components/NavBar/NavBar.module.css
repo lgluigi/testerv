@@ -71,7 +71,7 @@ and (max-device-width : 1024px)  {
     flex-flow: row nowrap;
     list-style: none;
     width: 50vw;
-    height: 5vh;
+    height: 4vh;
     justify-content: space-between;
     overflow-x: scroll;
   }
@@ -79,6 +79,7 @@ and (max-device-width : 1024px)  {
   .NavBar__btn {
     width: 12vw;
     text-align: center;
+    height: 3vh;
     margin-right: 7vw;
     cursor: pointer;
     opacity: 0.6;

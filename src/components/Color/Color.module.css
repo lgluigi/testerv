@@ -1,16 +1,22 @@
 @media only screen 
 and (min-device-width : 768px) 
-and (max-device-width : 1024px)  { /* STYLES GO HERE */} 
+and (max-device-width : 1024px)  { } 
 
 @media only screen 
 and (min-device-width : 375px) 
 and (max-device-width : 812px)
 and (-webkit-device-pixel-ratio : 3) { /* STYLES GO HERE */}
 
+
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { 
+
 .Color {
   display: flex;
   justify-content: center;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   margin: auto;
   width: 90vw;
 }
@@ -67,3 +73,6 @@ and (-webkit-device-pixel-ratio : 3) { /* STYLES GO HERE */}
 .Color__option > img {
   width: 2vw;
 }
+
+
+} 

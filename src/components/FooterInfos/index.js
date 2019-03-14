@@ -19,8 +19,7 @@ const FooterInfos = () => {
             <h1>${totalValue + stagingValue}</h1>
           </div>
           <h3 className={style.model}>Model R</h3>
-          {selected.engine && 
-          <h4 className={style.kwh}>{engine.kwh} 
+          {selected.engine && <h4 className={style.kwh}>{engine.kwh} 
           <p className={style.type}>{engine.type}</p></h4>}
           {selected.color && <img className={style.color} src={setColor[color.id]} alt={'color'} />}
           {selected.wheels && <img className={style.wheel} src={wheels.image} alt={'wheel'} />}
