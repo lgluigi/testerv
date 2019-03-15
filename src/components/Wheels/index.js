@@ -1,7 +1,5 @@
 import React from 'react';
 import * as style from './Wheels.module.css';
-import Carbon from './../../assets/wheel-carbon.png';
-import Grafitti from './../../assets/wheel-grafitti.png';
 import AppContext from './../../AppContext';
 
 
@@ -25,35 +23,35 @@ const Wheels = () => {
       {({updateState,data,wheels, selected}) => (
 
       <div className={style.Wheels}>
-        <div className={style.Wheel__container} onClick={() => updateState({
+        <div className={wheels.id === 0 ? style.Wheel__container__active : style.Wheel__container} onClick={() => updateState({
           wheels: updateWheels(0, data),
           stagingValue: getWheels(wheels.id, data).price,
           nextStep: 'result',
           selected: {...selected, wheels: true, step: true}
         })}>
           <img src={getWheels(0, data).image} alt={getWheels(0, data).label} className={style.Wheels__wheel} />
-          <h2 className={style.model}>{getWheels(0, data).label}c</h2>
+          <h2 className={style.model}>{getWheels(0, data).label}</h2>
           <h3 className={style.price}>{getWheels(0, data).price === 0 ? 'Included' : null}</h3>
         </div>
 
-        <div className={style.Wheel__container} onClick={() => updateState({
+        <div className={wheels.id === 1 ? style.Wheel__container__active : style.Wheel__container} onClick={() => updateState({
           wheels: updateWheels(1, data),
           stagingValue: getWheels(wheels.id, data).price,
           nextStep: 'result',
           selected: {...selected, wheels: true, step: true},
         })}>
-          <img src={Grafitti} alt={getWheels(1, data).label} className={style.Wheels__wheel} />
+          <img src={getWheels(1, data).image} alt={getWheels(1, data).label} className={style.Wheels__wheel} />
           <h2 className={style.model}>{getWheels(1, data).label}</h2>
           <h3 className={style.price}>+${getWheels(1, data).price}</h3>
         </div>
 
-        <div className={style.Wheel__container} onClick={() => updateState({
+        <div className={wheels.id === 2 ? style.Wheel__container__active : style.Wheel__container} onClick={() => updateState({
           wheels: updateWheels(2, data),
           stagingValue: getWheels(wheels.id, data).price,
           nextStep: 'result',
           selected: {...selected, wheels: true, step: true},
         })}>
-          <img src={Carbon} alt={getWheels(2, data).label} className={style.Wheels__wheel} />
+          <img src={getWheels(2, data).image} alt={getWheels(2, data).label} className={style.Wheels__wheel} />
           <h2 className={style.model}>{getWheels(2, data).label}</h2>
           <h3 className={style.price}>+${getWheels(2, data).price}</h3>
         </div>

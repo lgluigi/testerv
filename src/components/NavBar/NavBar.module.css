@@ -12,10 +12,19 @@
 .NavBar__logo {
   width: 200px;
   cursor: pointer;
+  border: 2px #FFFFFF solid;
+  transition: all 0.1s ease-out;
+
+}
+
+.NavBar__logo:active {
+  border-bottom-color: #AB1725;
+  transform: scale(1.1);
 }
 
 .NavBar__ul {
   display: flex;
+  position: static;
   flex-flow: row nowrap;
   margin-left: 15%;
   list-style: none;
@@ -75,6 +84,11 @@ and (max-device-width : 1024px)  {
     justify-content: space-between;
     overflow-x: scroll;
   }
+
+  .NavBar__ul::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+  }
   
   .NavBar__btn {
     width: 12vw;
@@ -97,4 +111,54 @@ and (max-device-width : 1024px)  {
 @media only screen 
 and (min-device-width : 375px) 
 and (max-device-width : 812px)
-and (-webkit-device-pixel-ratio : 3) { /* STYLES GO HERE */}
+and (-webkit-device-pixel-ratio : 3) { 
+  
+  .NavBar {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 3%;
+    width: 100vw;
+    margin: auto;
+    line-height: 1px;
+    height: 6vh;
+    justify-content: space-around;
+    font-family: 'Saira Condensed', sans-serif;
+    overflow-x: scroll;
+  }
+  
+  .NavBar__logo {
+    width: 200px;
+  }
+  
+  .NavBar__ul {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    width: 40vw;
+    height: 4vh;
+    justify-content: space-between;
+  }
+
+  .NavBar::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+  }
+  
+  .NavBar__btn {
+    width: 12vw;
+    text-align: center;
+    height: 3vh;
+    margin-right: 15vw;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all .2s ease;
+    user-select: none;
+  }
+  
+  .NavBar__btn:active {
+    border-bottom: 2px #AB1725 solid;
+    font-size: 14px;
+    opacity: 1;
+  }
+
+}

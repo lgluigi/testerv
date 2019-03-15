@@ -69,7 +69,7 @@
 .Body__infos > .info {
   border-bottom: 3px #AB1725 solid;
   width: 7vw;
-  height: 8vh;
+  height: 6vh;
   line-height: 1px;
 }
 
@@ -103,28 +103,30 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px)  { 
   .Body {
     display: flex;
-    margin-right: 20%;
+    margin-right: auto;
+    width: 100vw;
     flex-flow: column wrap;
   }
   
   .Body__wrapper {
-    margin: -5% 0% 0% 30%;
+    margin: -5% 0% 0% 25%;
   }
   
   .Body__h3 {
     font-size: 62px;
     font-weight: 100;
     color:#AB1725;
-    margin:5% 0% -2% 31%;
+    margin:5% 0% 1% 25.5%;
   }
   
   .Body__h1 {
     font-size: 132px;
     font-weight: 100;
+    margin-bottom: 50px;
   }
   
   .Body__car {
-    margin: 5% 0% 0% 10%;
+    margin-left: 15vw;
     transform: scale(0.9);
   }
   
@@ -134,7 +136,7 @@ and (max-device-width : 1024px)  {
     font-weight: 100;
     text-align: center;
     line-height: 1px;
-    margin: 0% 0% 0% 55%;
+    margin: auto;
     height: 6vh;
     cursor: pointer;
     white-space: nowrap;
@@ -171,6 +173,79 @@ and (min-device-width : 375px)
 and (max-device-width : 812px)
 and (-webkit-device-pixel-ratio : 3) { 
 
+  .Body {
+    display: flex;
+    margin-right: auto;
+    width: 375px;
+    height: 750px;
+    flex-flow: column wrap;
+  }
+  
+  .Body__wrapper {
+    margin: 100px 0px 0px 50px;
+  }
+  
+  .Body__h3 {
+    font-size: 34px;
+    font-weight: 100;
+    color:#AB1725;
+    margin: 50px 50px 0px 55px;
+    line-height: 300px;
+  }
+  
+  .Body__h1 {
+    margin: auto;
+    font-size: 92px;
+    font-weight: 100;
+    line-height: 190px;
+  }
+  
+  .Body__car {
+    margin: auto;
+  }
+
+  .Body__car > img {
+    width: 400px;
+  }
+  
+  
+  .Body__btn {
+    width: 100px;
+    text-align: center;
+    letter-spacing: 10px;
+    margin: -100px 100px 50px 140px;
+    height: 6vh;
+    cursor: pointer;
+    white-space: nowrap;
+    user-select: none;
+    border: 2px #FFFFFF solid;
+  }
+
+  .Body__btn > h2 {
+    font-weight: 100;
+    font-size: 26px;
+  }
+  
+  .Body__btn > h2 > img {
+    transition: margin-left .2s ease;
+    will-change: margin-left;
+  }
+  
+  .Body__btn:hover > h2 > img {
+    margin-left: 10px;
+  }
+  
+  .Body__infos {
+    width: 350px;
+    margin: 125px 0px 50px 13px;
+  }
+  
+  .Body__infos > .info {
+    border-bottom: 3px #AB1725 solid;
+    width: 100px;
+    height: 7vh;
+    line-height: 1px;
+  }
 
 
 

@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Saira+Condensed');
+@keyframes transition {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-* {
-  font-family: 'Saira Condensed', sans-serif;
+.page > div {
+  animation: transition 1s ease-in;
 }

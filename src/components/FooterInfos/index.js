@@ -23,7 +23,6 @@ const FooterInfos = () => {
           <p className={style.type}>{engine.type}</p></h4>}
           {selected.color && <img className={style.color} src={setColor[color.id]} alt={'color'} />}
           {selected.wheels && <img className={style.wheel} src={wheels.image} alt={'wheel'} />}
-          {console.log(selected)}
         </div>
 
         <div className={style.Footer__btn} 

@@ -1,6 +1,3 @@
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px)  { /* STYLES GO HERE */}
 
 @media only screen 
 and (min-device-width : 375px) 
@@ -76,4 +73,81 @@ and (-webkit-device-pixel-ratio : 3) { /* STYLES GO HERE */}
 
 .rebuild:hover > img {
   transform: rotate(180deg);
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { 
+  
+  .Result {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 10vh 5vw 5vh 5vw;
+    justify-content: center;
+    width: 90vw;
+  }
+  
+  .title {
+    font-weight: 100;  
+  }
+  
+  .title:after {
+    content: "R";
+    color: #AB1725;
+    font-weight: bold;
+  }
+  
+  .Result__car {
+    width: 35vw;
+    height: 25vh;
+    margin: 20vh 10vw 5vh 5vw;
+  }
+  
+  .Result__infos {
+    width: 40vw;
+    margin-right: 5vw;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40vw;
+  }
+  
+  .price {
+    width: 50%;
+    text-align: end;
+    color: #AB1725;
+  }
+  
+  .label {
+    width: 50%;
+    text-align: start;
+    font-weight: 200;
+    white-space: nowrap;
+  }
+  
+  .divider {
+    border: 1px lightgrey solid;
+    width: 100%;
+  }
+  
+  .rebuild {
+    margin: 3vh 5vw 0vh 5vw;
+    text-align: center;
+    font-weight: 200;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .rebuild > img {
+    transition: transform 0.3s ease;
+    will-change: transform;
+  }
+  
+  .rebuild:hover > img {
+    transform: rotate(180deg);
+  }
+
 }

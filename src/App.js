@@ -51,7 +51,7 @@ class App extends Component {
           <AppContext.Provider value={value}>
             <AppContext.Consumer>
               {({step, init}) => (
-              <div className={style.App}>
+              <div className={style.page}>
                   <NavBar />
                   {init ? null : <Body />}
                   {CurrentStep[step]}
