@@ -151,5 +151,88 @@ and (max-device-width : 1024px)  {
 
 @media only screen 
 and (min-device-width : 375px) 
-and (max-device-width : 812px)
-and (-webkit-device-pixel-ratio : 3) { /* STYLES GO HERE */}
+and (max-device-width : 812px) { 
+  
+  .Color {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    width: 98vw;
+    padding: 15px;
+  }
+
+  .Color__img {
+    margin: auto;
+    width: 98vw;
+    height: 40vh;
+    transform: scale(0.8);
+  }
+
+  .Color__img > img{
+    width: 390px;
+    transform: scale(1.4);
+  }
+
+  .price {
+    line-height: 4vh;
+    color: #AB1725;
+    text-align: center;
+    margin: auto;
+    font-size: 32px;
+  }
+
+  .label {
+    margin: auto;
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .Color__selection > div {
+    display: flex;
+    height: auto;
+    justify-content: space-around;
+    margin-top: 10vh;
+  }
+
+  .Color__selection > h1,
+  .Color__selection > p {
+    margin: auto;
+    width: 100vw;
+  }
+
+  .Color__selection > h1,
+  .Color__img > .label,
+  .Color__img > .price
+  {
+    font-weight: 200;
+  }
+
+
+  .Color__option,
+  .Color__option__active {
+    margin: auto;
+    border: 10px #FFFFFF solid;
+    border-radius: 50%;
+    height: 50px;
+    transition: all .1s ease-in;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .Color__option:active,
+  .Color__option__active {
+    background-color: #2E3948;
+    border-color: #2E3948;
+    height: 50px;
+  }
+
+  .Color__option__active {
+    transform: scale(1.1);
+  }
+
+  .Color__option > img {
+    width: 35px;
+  }
+
+
+}

@@ -198,8 +198,80 @@ and (max-device-width : 1024px)  {
 
 @media only screen 
 and (min-device-width : 375px) 
-and (max-device-width : 812px)
-and (-webkit-device-pixel-ratio : 3) {
+and (max-device-width : 812px) {
   
+  .Footer {
+    display: flex;
+    width: 812px;
+    background-color: #F2F2F2;
+    color: white;
+    padding: 10px;
+  }
 
+  .Footer__infos {
+    display: flex;
+    justify-content: flex-start;
+    margin: auto;
+    width: 90%;
+    flex-flow: row nowrap;
+    color: black;
+  }
+
+  .model {
+    opacity: 0;
+  }
+
+  .Footer__infos > .kwh {
+    opacity: 0;
+  }
+
+  .wheel {
+    opacity: 0;
+  }
+
+  .Footer__infos > .color {
+    opacity: 0;
+  }
+
+  .Footer__infos > .price {
+    line-height: 5px;
+
+  }
+
+  .Footer__infos > .price > h1 {
+    color:#AB1725;
+    font-weight: 200;
+  }
+
+  .Footer__btn {
+    color: black;
+    align-self: flex-end;
+    display: flex;
+    margin: 0px 470px 5px 0px;
+    width: 80px;
+    line-height: 1px;
+    height: 5.5vh;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .Footer__btn > h2 {
+    font-weight: 200;
+  }
+
+  .Footer__btn > img {
+    margin-left: 0;
+    transition: margin-left .2s ease;
+    will-change: margin-left;
+  }
+
+  .Footer__btn:hover > img {
+    margin-left: 8px;
+  }
+
+  .type {
+    color:#AB1725;
+    font-size: 18px;
+    margin: 0vh 0vh 1vh 0.2vw;
+  }
 }

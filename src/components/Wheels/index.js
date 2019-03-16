@@ -21,7 +21,8 @@ const Wheels = () => {
   return( 
     <AppContext.Consumer>
       {({updateState,data,wheels, selected}) => (
-
+      <React.Fragment>
+      <h1 className={style.Wheels__title}>Wheels</h1>
       <div className={style.Wheels}>
         <div className={wheels.id === 0 ? style.Wheel__container__active : style.Wheel__container} onClick={() => updateState({
           wheels: updateWheels(0, data),
@@ -56,6 +57,7 @@ const Wheels = () => {
           <h3 className={style.price}>+${getWheels(2, data).price}</h3>
         </div>
       </div>
+      </React.Fragment>
       )}
     </AppContext.Consumer>
   )

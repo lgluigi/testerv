@@ -170,8 +170,7 @@ and (max-device-width : 1024px)  {
 
 @media only screen 
 and (min-device-width : 375px) 
-and (max-device-width : 812px)
-and (-webkit-device-pixel-ratio : 3) { 
+and (max-device-width : 812px) { 
 
   .Body {
     display: flex;
@@ -205,9 +204,9 @@ and (-webkit-device-pixel-ratio : 3) {
   }
 
   .Body__car > img {
-    width: 400px;
+    width: 380px;
+    transform: scale(1.1);
   }
-  
   
   .Body__btn {
     width: 100px;
@@ -237,7 +236,7 @@ and (-webkit-device-pixel-ratio : 3) {
   
   .Body__infos {
     width: 350px;
-    margin: 125px 0px 50px 13px;
+    margin: 125px 0px 50px 25px;
   }
   
   .Body__infos > .info {
