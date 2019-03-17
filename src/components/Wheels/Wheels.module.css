@@ -1,4 +1,4 @@
-.Wheels {
+.wheels {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -6,7 +6,7 @@
   width: 60vw;
 }
 
-.Wheel__container {
+.wheel__container {
   margin-top: 25vh;
   opacity: 0.5;
   transition: opacity 0.3s ease-in;
@@ -15,7 +15,12 @@
   user-select: none;
 }
 
-.Wheel__container__active {
+.wheels__title {
+    margin: 0px 0px 0px 7vw;
+    font-weight: 100;
+  }
+
+.wheel__container--active {
   margin-top: 25vh;
   opacity: 1;
   transition: opacity 0.3s ease-in;
@@ -25,14 +30,14 @@
   transform: scale(1.1);
 }
 
-.Wheel__container__active > .model,
-.Wheel__container__active > .price {
+.wheel__container--active > .model,
+.wheel__container--active > .price {
   opacity: 1;
 }
 
 
-.Wheel__container:hover > .model,
-.Wheel__container:hover > .price {
+.wheel__container:hover > .model,
+.wheel__container:hover > .price {
   opacity: 0.6;
 }
 
@@ -55,7 +60,7 @@
   font-weight: 100;
 }
 
-.Wheels__wheel {
+.wheel__wheel {
   width: 15vw;
 }
 
@@ -64,13 +69,13 @@
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)  {
   
-  .Wheels {
+  .wheels {
     margin: auto;
     width: 90vw;
     height: 80vh;
   }
   
-  .Wheel__container {
+  .wheel__container {
     margin: 25vh 5vw 25vh 5vw;
     opacity: 0.5;
     transition: opacity 0.3s ease-in;
@@ -78,8 +83,13 @@ and (max-device-width : 1024px)  {
     cursor: pointer;
     user-select: none;
   }
+
+  .wheels__title {
+    margin: 0px 0px 0px 15px;
+    font-weight: 100;
+  }
   
-  .Wheel__container__active {
+  .wheel__container--active {
     margin: 25vh 5vw 25vh 5vw;
     opacity: 1;
     transition: opacity 0.3s ease-in;
@@ -89,14 +99,14 @@ and (max-device-width : 1024px)  {
     transform: scale(1.1);
   }
   
-  .Wheel__container__active > .model,
-  .Wheel__container__active > .price {
+  .wheel__container--active > .model,
+  .wheel__container--active > .price {
     opacity: 1;
   }
   
   
-  .Wheel__container:hover > .model,
-  .Wheel__container:hover > .price {
+  .wheel__container:hover > .model,
+  .wheel__container:hover > .price {
     opacity: 0.5;
   }
   
@@ -120,7 +130,7 @@ and (max-device-width : 1024px)  {
     line-height: 1px;
   }
   
-  .Wheels__wheel {
+  .wheels__wheel {
     width: 20vw;
   }
 }
@@ -130,23 +140,23 @@ and (max-device-width : 1024px)  {
 and (min-device-width : 375px) 
 and (max-device-width : 812px) { 
   
-  .Wheels {
+  .wheels {
     margin: 70px 0px 30px 0px;
     width: 390px;
     overflow-x: scroll;
   }
 
-  .Wheels::-webkit-scrollbar {
+  .wheels::-webkit-scrollbar {
     width: 0;
     height: 0;
   }
 
-  .Wheels__title {
+  .wheels__title {
     margin: 0px 0px 0px 15px;
     font-weight: 100;
   }
   
-  .Wheel__container {
+  .wheel__container {
     opacity: 0.5;
     transition: opacity 0.3s ease-in;
     will-change: opacity;
@@ -154,7 +164,7 @@ and (max-device-width : 812px) {
     user-select: none;
   }
   
-  .Wheel__container__active {
+  .wheel__container--active {
     opacity: 1;
     transition: opacity 0.3s ease-in;
     will-change: opacity;
@@ -163,14 +173,14 @@ and (max-device-width : 812px) {
     transform: scale(1.1);
   }
   
-  .Wheel__container__active > .model,
-  .Wheel__container__active > .price {
+  .wheel__container--active > .model,
+  .wheel__container--active > .price {
     opacity: 1;
   }
   
   
-  .Wheel__container:hover > .model,
-  .Wheel__container:hover > .price {
+  .wheel__container:hover > .model,
+  .wheel__container:hover > .price {
     opacity: 0.5;
   }
   
@@ -193,7 +203,7 @@ and (max-device-width : 812px) {
     line-height: 1px;
   }
   
-  .Wheels__wheel {
+  .wheels__wheel {
     width: 200px;
   }
 }

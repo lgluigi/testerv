@@ -2,6 +2,7 @@ import React from 'react';
 
 
 export const contextState = {
+  model: 'modelR',
   init: false,
   totalValue: 0,
   stagingValue: 0,

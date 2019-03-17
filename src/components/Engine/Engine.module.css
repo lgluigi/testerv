@@ -1,4 +1,4 @@
-.Engine {
+.engine {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -6,18 +6,18 @@
   width: 80vw;
 }
 
-.Engine__infos {
+.engine__infos {
   width: 30vw;
   margin-top: 5vh;
 }
 
-.Engine__img {
+.engine__img {
   width: 20vmax;
   height: 35vmax;
 }
 
 .box,
-.box__active {
+.box--active {
   display: flex;
   background-color: #F2F2F2;
   flex-flow: row nowrap;
@@ -34,16 +34,16 @@
   user-select: none;
 }
 
-.box__active {
+.box--active {
   opacity: 1;
 }
 
-.box__active > .dot {
+.box--active > .dot {
   border: 10px #AB1725 solid;
   border-radius: 360px;
 }
 
-.Engine__infos > .title {
+.engine__infos > .title {
   margin-bottom: 6vh;
   font-weight: 100;
   font-size: 38px;
@@ -87,11 +87,11 @@
   opacity: 0.6;
 }
 
-.Engine__infos > div:nth-child(3) > .model:after {
+.engine__infos > div:nth-child(3) > .model:after {
   content: "S";
 }
 
-.Engine__infos > div:nth-child(4) > .model:after {
+.engine__infos > div:nth-child(4) > .model:after {
   content: "B";
 }
 
@@ -99,7 +99,7 @@
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)  { 
 
-  .Engine {
+  .engine {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
@@ -107,19 +107,19 @@ and (max-device-width : 1024px)  {
     width: 90vw;
   }
   
-  .Engine__infos {
+  .engine__infos {
     width: 50vw;
     margin-top: 5vh;
   }
   
-  .Engine__img {
+  .engine__img {
     margin: auto;
     width: 40%;
     height: 50%;
   }
   
   .box,
-  .box__active {
+  .box--active {
     display: flex;
     background-color: #F2F2F2;
     flex-flow: row nowrap;
@@ -136,16 +136,16 @@ and (max-device-width : 1024px)  {
     user-select: none;
   }
   
-  .box__active {
+  .box--active {
     opacity: 1;
   }
   
-  .box__active > .dot {
+  .box--active > .dot {
     border: 10px #AB1725 solid;
     border-radius: 360px;
   }
   
-  .Engine__infos > .title {
+  .engine__infos > .title {
     margin-bottom: 6vh;
     font-weight: 100;
     font-size: 34px;
@@ -162,7 +162,7 @@ and (min-device-width : 375px)
 and (max-device-width : 812px) { 
   
 
-  .Engine {
+  .engine {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
@@ -170,13 +170,13 @@ and (max-device-width : 812px) {
     width: 375px;
   }
   
-  .Engine__infos {
+  .engine__infos {
     height: 300px;
     width: 350px;
     padding: 6%;
   }
   
-  .Engine__img {
+  .engine__img {
     margin: -50px 0px -150px 100px;
     width: 200px;
     height: 350px;
@@ -184,7 +184,7 @@ and (max-device-width : 812px) {
   }
   
   .box,
-  .box__active {
+  .box--active {
     display: flex;
     background-color: #F2F2F2;
     flex-flow: column wrap;
@@ -200,17 +200,17 @@ and (max-device-width : 812px) {
     user-select: none;
   }
   
-  .box__active {
+  .box--active {
     opacity: 1;
   }
   
-  .box__active > .dot {
+  .box--active > .dot {
     border: 10px #AB1725 solid;
     border-radius: 360px;
     margin-left: 20px;
   }
   
-  .Engine__infos > .title {
+  .engine__infos > .title {
     margin-bottom: 6vh;
     font-weight: 100;
     font-size: 32px;

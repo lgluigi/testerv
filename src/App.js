@@ -6,10 +6,10 @@ import FooterInfos from './components/FooterInfos';
 import Color from './components/Color';
 import Wheels from './components/Wheels';
 import Result from './components/Result';
+import Maintanance from './components/Maintanance';
 import * as style from './App.module.css';
 import axios from 'axios';
 import AppContext, { contextState } from './AppContext';
-
 import './index.css';
 
 const CurrentStep = {
@@ -35,7 +35,7 @@ class App extends Component {
     componentDidMount(){
         axios
           .get('https://next.json-generator.com/api/json/get/41ORKNZDU')
-          .then(res => (this.setApiData(res.data)))
+          .then(async res => ( await this.setApiData(res.data)))
           .catch(err => console.log(err));
     }
 
@@ -50,11 +50,11 @@ class App extends Component {
         return (
           <AppContext.Provider value={value}>
             <AppContext.Consumer>
-              {({step, init}) => (
+              {({step, init, model}) => (
               <div className={style.page}>
                   <NavBar />
-                  {init ? null : <Body />}
-                  {CurrentStep[step]}
+                  {init ? null : (model === 'modelR' ? <Body /> : null)}
+                  {model === 'modelR' ? CurrentStep[step] : <Maintanance />}
                   {init ? (step === 'result' ? null : <FooterInfos />) : null}
               </div>
               )}

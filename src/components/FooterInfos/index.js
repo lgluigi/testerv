@@ -12,20 +12,20 @@ const FooterInfos = () => {
   return(
     <AppContext.Consumer>
       {({updateState, engine, totalValue, selected, nextStep, stagingValue, color, wheels}) => (
-      <div className={style.Footer}>
-        <div className={style.Footer__infos}>
-          <div className={style.price}>
+      <div className={style['footer']}>
+        <div className={style['footer__infos']}>
+          <div className={style['price']}>
             <p>Total</p>
             <h1>${totalValue + stagingValue}</h1>
           </div>
-          <h3 className={style.model}>Model R</h3>
-          {selected.engine && <h4 className={style.kwh}>{engine.kwh} 
-          <p className={style.type}>{engine.type}</p></h4>}
-          {selected.color && <img className={style.color} src={setColor[color.id]} alt={'color'} />}
-          {selected.wheels && <img className={style.wheel} src={wheels.image} alt={'wheel'} />}
+          <h3 className={style['model']}>Model R</h3>
+          {selected.engine && <h4 className={style['kwh']}>{engine.kwh} 
+          <p className={style['type']}>{engine.type}</p></h4>}
+          {selected.color && <img className={style['color']} src={setColor[color.id]} alt={'color'} />}
+          {selected.wheels && <img className={style['wheel']} src={wheels.image} alt={'wheel'} />}
         </div>
 
-        <div className={style.Footer__btn} 
+        <div className={style['footer__btn']} 
           onClick={
           selected.step ? () => updateState({
             step: nextStep,

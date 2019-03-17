@@ -1,4 +1,4 @@
-.NavBar {
+.navbar {
   display: flex;
   flex-flow: row nowrap;
   padding: 1%;
@@ -9,7 +9,7 @@
   font-family: 'Saira Condensed', sans-serif;
 }
 
-.NavBar__logo {
+.navbar__logo {
   width: 200px;
   cursor: pointer;
   border: 2px #FFFFFF solid;
@@ -17,40 +17,41 @@
 
 }
 
-.NavBar__logo:active {
+.navbar__logo:active {
   border-bottom-color: #AB1725;
   transform: scale(1.1);
 }
 
-.NavBar__ul {
+.navbar__ul {
   display: flex;
   position: static;
   flex-flow: row nowrap;
   margin-left: 15%;
   list-style: none;
-  width: 30vw;
+  width: 40vw;
   height: auto;
   justify-content: space-between;
 }
 
-.NavBar__btn {
-  width: 4vw;
+.navbar__btn,
+.navbar__btn--active {
+  width: 6vw;
   text-align: center;
   white-space: nowrap;
-  line-height: 1;
+  line-height: 1px;
   cursor: pointer;
   opacity: 0.6;
   transition: all .2s ease;
   user-select: none;
 }
 
-.NavBar__btn:hover {
+.navbar__btn:hover {
   border-bottom: 2px #AB1725 solid;
   opacity: 1;
 }
 
 
-.NavBar__btn:active {
+.navbar__btn--active {
   border-bottom: 2px #AB1725 solid;
   font-size: 14px;
 }
@@ -59,41 +60,40 @@
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)  { 
   
-  .NavBar {
+  .navbar {
     display: flex;
     flex-flow: row nowrap;
     padding: 1%;
     width: 90vw;
-    margin: auto;
-    line-height: 1px;
-    height: 6vh;
     justify-content: space-around;
     font-family: 'Saira Condensed', sans-serif;
   }
   
-  .NavBar__logo {
+  .navbar__logo {
     width: 200px;
   }
   
-  .NavBar__ul {
+  .navbar__ul {
     display: flex;
     flex-flow: row nowrap;
     list-style: none;
-    width: 50vw;
-    height: 4vh;
+    width: 70vw;
+    height: 6vh;
     justify-content: space-between;
     overflow-x: scroll;
   }
 
-  .NavBar__ul::-webkit-scrollbar {
+  .navbar__ul::-webkit-scrollbar {
       width: 0;
       height: 0;
   }
   
-  .NavBar__btn {
+  .navbar__btn,
+  .navbar__btn--active {
     width: 12vw;
     text-align: center;
-    height: 3vh;
+    line-height: 3vh;
+    height: 4vh;
     margin-right: 7vw;
     cursor: pointer;
     opacity: 0.6;
@@ -101,7 +101,7 @@ and (max-device-width : 1024px)  {
     user-select: none;
   }
   
-  .NavBar__btn:active {
+  .navbar__btn--active {
     border-bottom: 2px #AB1725 solid;
     font-size: 14px;
     opacity: 1;
@@ -112,7 +112,7 @@ and (max-device-width : 1024px)  {
 and (min-device-width : 375px) 
 and (max-device-width : 812px) { 
   
-  .NavBar {
+  .navbar {
     display: flex;
     flex-flow: row nowrap;
     padding: 3%;
@@ -125,12 +125,12 @@ and (max-device-width : 812px) {
     overflow-x: scroll;
   }
   
-  .NavBar__logo {
+  .navbar__logo {
     margin-top: 4vw;
     width: 200px;
   }
   
-  .NavBar__ul {
+  .navbar__ul {
     display: flex;
     flex-flow: row nowrap;
     list-style: none;
@@ -139,12 +139,13 @@ and (max-device-width : 812px) {
     justify-content: space-between;
   }
 
-  .NavBar::-webkit-scrollbar {
+  .navbar::-webkit-scrollbar {
       width: 0;
       height: 0;
   }
   
-  .NavBar__btn {
+  .navbar__btn,
+  .navbar__btn--active {
     width: 12vw;
     text-align: center;
     height: 3vh;
@@ -156,7 +157,7 @@ and (max-device-width : 812px) {
     user-select: none;
   }
   
-  .NavBar__btn:active {
+  .navbar__btn--active {
     border-bottom: 2px #AB1725 solid;
     font-size: 14px;
     opacity: 1;

@@ -1,4 +1,4 @@
-.Color {
+.color {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -6,7 +6,7 @@
   width: 90vw;
 }
 
-.Color__img {
+.color__img {
   margin: 10vh 8vw 0vh 0vh;
 }
 
@@ -15,26 +15,26 @@
   color: #AB1725;
 }
 
-.Color__selection > div {
+.color__selection > div {
   display: flex;
   height: auto;
   justify-content: space-around;
   margin-top: 10vh;
 }
 
-.Color__selection > p {
+.color__selection > p {
   width: 30vw;
 }
 
-.Color__selection > h1,
-.Color__img > .label 
+.color__selection > h1,
+.color__img > .label 
 {
   font-weight: 200;
 }
 
 
-.Color__option,
-.Color__option__active {
+.color__option,
+.color__option--active {
   margin: auto;
   border: 10px #FFFFFF solid;
   border-radius: 50%;
@@ -44,19 +44,19 @@
   user-select: none;
 }
 
-.Color__option:active,
-.Color__option__active {
+.color__option:active,
+.color__option--active {
   background-color: #2E3948;
   border-color: #2E3948;
-  height: 5.3vh;
+  height: 5.4vh;
 }
 
-.Color__option:hover,
-.Color__option__active {
+.color__option:hover,
+.color__option--active {
   transform: scale(1.1);
 }
 
-.Color__option > img {
+.color__option > img {
   width: 2vw;
 }
 
@@ -65,21 +65,21 @@
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)  { 
 
-  .Color {
+  .color {
     display: flex;
     justify-content: center;
     flex-flow: column wrap;
     width: 100vw;
   }
 
-  .Color__img {
+  .color__img {
     margin: auto;
     height: 45vh;
-    transform: scale(0.8);
   }
 
-  .Color__img > img{
-    width: 60vw;
+  .color__img > img{
+    transform: scale(1.2);
+    width: 50vw;
   }
 
   .price {
@@ -94,33 +94,33 @@ and (max-device-width : 1024px)  {
     text-align: center;
   }
 
-  .Color__selection > div {
+  .color__selection > div {
     display: flex;
     height: auto;
     justify-content: space-around;
     margin-top: 10vh;
   }
 
-  .Color__selection > h1 {
+  .color__selection > h1 {
     margin: auto;
     width: 90vw;
   }
 
-  .Color__selection > p {
+  .color__selection > p {
     margin: auto;
     width: 90vw;
   }
 
-  .Color__selection > h1,
-  .Color__img > .label,
-  .Color__img > .price
+  .color__selection > h1,
+  .color__img > .label,
+  .color__img > .price
   {
     font-weight: 200;
   }
 
 
-  .Color__option,
-  .Color__option__active {
+  .color__option,
+  .color__option--active {
     margin: auto;
     border: 10px #FFFFFF solid;
     border-radius: 50%;
@@ -130,18 +130,18 @@ and (max-device-width : 1024px)  {
     user-select: none;
   }
 
-  .Color__option:active,
-  .Color__option__active {
+  .color__option:active,
+  .color__option--active {
     background-color: #2E3948;
     border-color: #2E3948;
     height: 6.4vh;
   }
 
-  .Color__option__active {
+  .color__option--active {
     transform: scale(1.1);
   }
 
-  .Color__option > img {
+  .color__option > img {
     width: 4vw;
   }
 
@@ -153,7 +153,7 @@ and (max-device-width : 1024px)  {
 and (min-device-width : 375px) 
 and (max-device-width : 812px) { 
   
-  .Color {
+  .color {
     display: flex;
     justify-content: center;
     flex-flow: column wrap;
@@ -161,14 +161,14 @@ and (max-device-width : 812px) {
     padding: 15px;
   }
 
-  .Color__img {
+  .color__img {
     margin: auto;
     width: 98vw;
     height: 40vh;
     transform: scale(0.8);
   }
 
-  .Color__img > img{
+  .color__img > img{
     width: 390px;
     transform: scale(1.4);
   }
@@ -187,29 +187,29 @@ and (max-device-width : 812px) {
     font-size: 32px;
   }
 
-  .Color__selection > div {
+  .color__selection > div {
     display: flex;
     height: auto;
     justify-content: space-around;
     margin-top: 10vh;
   }
 
-  .Color__selection > h1,
-  .Color__selection > p {
+  .color__selection > h1,
+  .color__selection > p {
     margin: auto;
     width: 100vw;
   }
 
-  .Color__selection > h1,
-  .Color__img > .label,
-  .Color__img > .price
+  .color__selection > h1,
+  .color__img > .label,
+  .color__img > .price
   {
     font-weight: 200;
   }
 
 
-  .Color__option,
-  .Color__option__active {
+  .color__option,
+  .color__option--active {
     margin: auto;
     border: 10px #FFFFFF solid;
     border-radius: 50%;
@@ -219,18 +219,18 @@ and (max-device-width : 812px) {
     user-select: none;
   }
 
-  .Color__option:active,
-  .Color__option__active {
+  .color__option:active,
+  .color__option--active {
     background-color: #2E3948;
     border-color: #2E3948;
     height: 50px;
   }
 
-  .Color__option__active {
+  .color__option--active {
     transform: scale(1.1);
   }
 
-  .Color__option > img {
+  .color__option > img {
     width: 35px;
   }
 

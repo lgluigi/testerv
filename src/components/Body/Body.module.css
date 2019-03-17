@@ -1,14 +1,14 @@
-.Body {
+.body {
   display: flex;
   margin-right: 30%;
   flex-flow: column wrap;
 }
 
-.Body__wrapper {
+.body__wrapper {
   margin: -5% 0% 0% 35%;
 }
 
-.Body__h3 {
+.body__h3 {
   font-size: 52px;
   font-weight: 100;
   color:#AB1725;
@@ -16,23 +16,23 @@
   margin:5% 0% -2% 35.5%;
 }
 
-.Body__h1 {
+.body__h1 {
   font-size: 152px;
   font-weight: 100;
   height: 1vh;
 }
 
-.Body__h1:after {
+.body__h1:after {
   content: 'R';
   color: #AB1725;
   font-weight: bold;
 }
 
-.Body__car {
+.body__car {
   margin: 3% 0% 0% 45%;
 }
 
-.Body__btn {
+.body__btn {
   width: 6vw;
   font-size: 20px;
   font-weight: 100;
@@ -46,53 +46,53 @@
   border: 2px #FFFFFF solid;
 }
 
-.Body__btn:hover {
+.body__btn:hover {
   border-bottom-color: #AB1725;
 }
 
-.Body__btn > h2 > img {
+.body__btn > h2 > img {
   transition: margin-left .2s ease;
   will-change: margin-left;
 }
 
-.Body__btn:hover > h2 > img {
+.body__btn:hover > h2 > img {
   margin-left: 10px;
 }
 
-.Body__infos {
+.body__infos {
   width: 100vw;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
 }
 
-.Body__infos > .info {
+.body__infos > .info {
   border-bottom: 3px #AB1725 solid;
   width: 7vw;
   height: 6vh;
   line-height: 1px;
 }
 
-.Body__infos > .info > h2 {
+.body__infos > .info > h2 {
   color: #AB1725;
 }
 
-.Body__infos > .info:nth-child(1) > h2:after {
+.body__infos > .info:nth-child(1) > h2:after {
   content: "s";
   font-size: 15px;
 }
 
-.Body__infos > .info:nth-child(2) > h2:after {
+.body__infos > .info:nth-child(2) > h2:after {
   content: "mi";
   font-size: 15px;
 }
 
-.Body__infos > .info:nth-child(3) > h2:after {
+.body__infos > .info:nth-child(3) > h2:after {
   content: "mp/h";
   font-size: 15px;
 }
 
-.Body__infos > .info > h4 {
+.body__infos > .info > h4 {
   opacity: 0.7;
   font-weight: 200;
 }
@@ -101,36 +101,36 @@
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px)  { 
-  .Body {
+  .body {
     display: flex;
     margin-right: auto;
     width: 100vw;
     flex-flow: column wrap;
   }
   
-  .Body__wrapper {
+  .body__wrapper {
     margin: -5% 0% 0% 25%;
   }
   
-  .Body__h3 {
+  .body__h3 {
     font-size: 62px;
     font-weight: 100;
     color:#AB1725;
     margin:5% 0% 1% 25.5%;
   }
   
-  .Body__h1 {
+  .body__h1 {
     font-size: 132px;
     font-weight: 100;
     margin-bottom: 50px;
   }
   
-  .Body__car {
+  .body__car {
     margin-left: 15vw;
     transform: scale(0.9);
   }
   
-  .Body__btn {
+  .body__btn {
     width: 13vw;
     font-size: 20px;
     font-weight: 100;
@@ -144,21 +144,21 @@ and (max-device-width : 1024px)  {
     border: 2px #FFFFFF solid;
   }
   
-  .Body__btn > h2 > img {
+  .body__btn > h2 > img {
     transition: margin-left .2s ease;
     will-change: margin-left;
   }
   
-  .Body__btn:hover > h2 > img {
+  .body__btn:hover > h2 > img {
     margin-left: 10px;
   }
   
-  .Body__infos {
+  .body__infos {
     width: 100vw;
     margin: auto;
   }
   
-  .Body__infos > .info {
+  .body__infos > .info {
     margin-top: 6vh;
     border-bottom: 3px #AB1725 solid;
     width: 12vw;
@@ -172,7 +172,7 @@ and (max-device-width : 1024px)  {
 and (min-device-width : 375px) 
 and (max-device-width : 812px) { 
 
-  .Body {
+  .body {
     display: flex;
     margin-right: auto;
     width: 375px;
@@ -180,11 +180,11 @@ and (max-device-width : 812px) {
     flex-flow: column wrap;
   }
   
-  .Body__wrapper {
+  .body__wrapper {
     margin: 100px 0px 0px 50px;
   }
   
-  .Body__h3 {
+  .body__h3 {
     font-size: 34px;
     font-weight: 100;
     color:#AB1725;
@@ -192,23 +192,23 @@ and (max-device-width : 812px) {
     line-height: 300px;
   }
   
-  .Body__h1 {
+  .body__h1 {
     margin: auto;
     font-size: 92px;
     font-weight: 100;
     line-height: 190px;
   }
   
-  .Body__car {
+  .body__car {
     margin: auto;
   }
 
-  .Body__car > img {
+  .body__car > img {
     width: 380px;
     transform: scale(1.1);
   }
   
-  .Body__btn {
+  .body__btn {
     width: 100px;
     text-align: center;
     letter-spacing: 10px;
@@ -220,32 +220,29 @@ and (max-device-width : 812px) {
     border: 2px #FFFFFF solid;
   }
 
-  .Body__btn > h2 {
+  .body__btn > h2 {
     font-weight: 100;
     font-size: 26px;
   }
   
-  .Body__btn > h2 > img {
+  .body__btn > h2 > img {
     transition: margin-left .2s ease;
     will-change: margin-left;
   }
   
-  .Body__btn:hover > h2 > img {
+  .body__btn:hover > h2 > img {
     margin-left: 10px;
   }
   
-  .Body__infos {
+  .body__infos {
     width: 350px;
     margin: 125px 0px 50px 25px;
   }
   
-  .Body__infos > .info {
+  .body__infos > .info {
     border-bottom: 3px #AB1725 solid;
     width: 100px;
     height: 7vh;
     line-height: 1px;
   }
-
-
-
 }

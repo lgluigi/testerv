@@ -19,40 +19,47 @@ const getColor = (id, data) => {
   return id === undefined ?  data.color.items[0] : data.color.items[id];
 }
 
+const isSelected = (color, id) => {
+  return color.id === id;
+}
+
 const Color = () => {
   return(
   <AppContext.Consumer>
     {({data, updateState, color, selected}) => (
-      <div className={style.Color}>
-        <div className={style.Color__img}>
+      <div className={style['color']}>
+        <div className={style['color__img']}>
           <img src={getColor(color.id, data).image} alt={getColor(color.id, data).label} />
-          <h2 className={style.label}>{getColor(color.id, data).label}</h2>
-          <h2 className={style.price}>
+          <h2 className={style['label']}>{getColor(color.id, data).label}</h2>
+          <h2 className={style['price']}>
             {getColor(color.id, data).price === 0 ? 'Included' : `+$${getColor(color.id, data).price}`}
           </h2>
         </div>
 
-        <div className={style.Color__selection}>
+        <div className={style['color__selection']}>
           <h1>Color</h1>
           <p>
             {data.color.description}
           </p>
           <div>
-              <div className={color.id === 0 ? style.Color__option__active : style.Color__option} onClick={() => updateState({
+              <div className={isSelected(color, 0) ? style['color__option--active'] : style['color__option']} 
+              onClick={() => updateState({
                 color: selectColor(0, data),
                 stagingValue: getColor(color.id, data).price,
                 selected: {...selected, step: true, color: true},
                 nextStep: 'wheels'
               })}><img src={red}  alt={getColor(0, data).label} /></div>
 
-              <div className={color.id === 1 ? style.Color__option__active : style.Color__option} onClick={() => updateState({
+              <div className={isSelected(color, 1) ? style['color__option--active'] : style['color__option']} 
+              onClick={() => updateState({
                 color: selectColor(1, data),
                 stagingValue: getColor(color.id, data).price,
                 selected: {...selected, step: true, color: true},
                 nextStep: 'wheels',
               })}><img src={blue} alt={getColor(1, data).label} /></div>
 
-              <div className={color.id === 2 ? style.Color__option__active : style.Color__option} onClick={() => updateState({
+              <div className={isSelected(color, 2) ? style['color__option--active'] : style['color__option']} 
+              onClick={() => updateState({
                 color: selectColor(2, data),
                 stagingValue: getColor(color.id, data).price,
                 selected: {...selected, step: true, color: true},

@@ -16,45 +16,51 @@ const getWheels = (id, data) => {
   return id === undefined ?  data.wheels.items[0] : data.wheels.items[id];
 }
 
+const isSelected = (wheels, id) => {
+  return wheels.id === id;
+}
 
 const Wheels = () => {
   return( 
     <AppContext.Consumer>
       {({updateState,data,wheels, selected}) => (
       <React.Fragment>
-      <h1 className={style.Wheels__title}>Wheels</h1>
-      <div className={style.Wheels}>
-        <div className={wheels.id === 0 ? style.Wheel__container__active : style.Wheel__container} onClick={() => updateState({
+      <h1 className={style['wheels__title']}>Wheels</h1>
+      <div className={style['wheels']}>
+        <div className={isSelected(wheels, 0) ? style['wheel__container--active'] : style['wheel__container']} 
+        onClick={() => updateState({
           wheels: updateWheels(0, data),
           stagingValue: getWheels(wheels.id, data).price,
           nextStep: 'result',
           selected: {...selected, wheels: true, step: true}
         })}>
-          <img src={getWheels(0, data).image} alt={getWheels(0, data).label} className={style.Wheels__wheel} />
-          <h2 className={style.model}>{getWheels(0, data).label}</h2>
-          <h3 className={style.price}>{getWheels(0, data).price === 0 ? 'Included' : null}</h3>
+          <img src={getWheels(0, data).image} alt={getWheels(0, data).label} className={style['wheels__wheel']} />
+          <h2 className={style['model']}>{getWheels(0, data).label}</h2>
+          <h3 className={style['price']}>{getWheels(0, data).price === 0 ? 'Included' : null}</h3>
         </div>
 
-        <div className={wheels.id === 1 ? style.Wheel__container__active : style.Wheel__container} onClick={() => updateState({
+        <div className={isSelected(wheels, 1) ? style['wheel__container--active'] : style['wheel__container']} 
+        onClick={() => updateState({
           wheels: updateWheels(1, data),
           stagingValue: getWheels(wheels.id, data).price,
           nextStep: 'result',
           selected: {...selected, wheels: true, step: true},
         })}>
-          <img src={getWheels(1, data).image} alt={getWheels(1, data).label} className={style.Wheels__wheel} />
-          <h2 className={style.model}>{getWheels(1, data).label}</h2>
-          <h3 className={style.price}>+${getWheels(1, data).price}</h3>
+          <img src={getWheels(1, data).image} alt={getWheels(1, data).label} className={style['wheels__wheel']} />
+          <h2 className={style['model']}>{getWheels(1, data).label}</h2>
+          <h3 className={style['price']}>+${getWheels(1, data).price}</h3>
         </div>
 
-        <div className={wheels.id === 2 ? style.Wheel__container__active : style.Wheel__container} onClick={() => updateState({
+        <div className={isSelected(wheels, 2) ? style['wheel__container--active'] : style['wheel__container']} 
+        onClick={() => updateState({
           wheels: updateWheels(2, data),
           stagingValue: getWheels(wheels.id, data).price,
           nextStep: 'result',
           selected: {...selected, wheels: true, step: true},
         })}>
-          <img src={getWheels(2, data).image} alt={getWheels(2, data).label} className={style.Wheels__wheel} />
-          <h2 className={style.model}>{getWheels(2, data).label}</h2>
-          <h3 className={style.price}>+${getWheels(2, data).price}</h3>
+          <img src={getWheels(2, data).image} alt={getWheels(2, data).label} className={style['wheels__wheel']} />
+          <h2 className={style['model']}>{getWheels(2, data).label}</h2>
+          <h3 className={style['price']}>+${getWheels(2, data).price}</h3>
         </div>
       </div>
       </React.Fragment>
