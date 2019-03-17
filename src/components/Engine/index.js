@@ -33,7 +33,7 @@ const Engine = () => {
           <div className={isSelected(engine, 0) ? style['box--active'] : style['box']}
           onClick={() => updateState({
             engine: selectEngine(0, data),
-            stagingValue: getEngine(engine.id, data).price, 
+            stagingValue: data.engine.items[0].price, 
             selected: {...selected, engine: true, step: true},
             nextStep: 'color'
             })}>
@@ -47,7 +47,7 @@ const Engine = () => {
           <div className={isSelected(engine, 1) ? style['box--active'] : style['box']} 
           onClick={() => updateState({
             engine: selectEngine(1, data),
-            stagingValue: getEngine(engine.id, data).price,
+            stagingValue: data.engine.items[1].price,
             selected: {...selected, engine: true, step: true},
             nextStep: 'color'
             })}>
@@ -61,7 +61,7 @@ const Engine = () => {
           <div className={isSelected(engine, 2) ? style['box--active'] : style['box']} 
           onClick={() => updateState({
             engine: selectEngine(2, data),
-            stagingValue: getEngine(engine.id, data).price,
+            stagingValue: data.engine.items[2].price,
             selected: {...selected, engine: true, step: true},
             nextStep: 'color'
             })}>

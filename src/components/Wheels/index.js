@@ -30,7 +30,7 @@ const Wheels = () => {
         <div className={isSelected(wheels, 0) ? style['wheel__container--active'] : style['wheel__container']} 
         onClick={() => updateState({
           wheels: updateWheels(0, data),
-          stagingValue: getWheels(wheels.id, data).price,
+          stagingValue: data.wheels.items[0].price,
           nextStep: 'result',
           selected: {...selected, wheels: true, step: true}
         })}>
@@ -42,7 +42,7 @@ const Wheels = () => {
         <div className={isSelected(wheels, 1) ? style['wheel__container--active'] : style['wheel__container']} 
         onClick={() => updateState({
           wheels: updateWheels(1, data),
-          stagingValue: getWheels(wheels.id, data).price,
+          stagingValue: data.wheels.items[1].price,
           nextStep: 'result',
           selected: {...selected, wheels: true, step: true},
         })}>
@@ -54,7 +54,7 @@ const Wheels = () => {
         <div className={isSelected(wheels, 2) ? style['wheel__container--active'] : style['wheel__container']} 
         onClick={() => updateState({
           wheels: updateWheels(2, data),
-          stagingValue: getWheels(wheels.id, data).price,
+          stagingValue: data.wheels.items[2].price,
           nextStep: 'result',
           selected: {...selected, wheels: true, step: true},
         })}>

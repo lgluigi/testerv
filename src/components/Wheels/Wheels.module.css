@@ -15,10 +15,14 @@
   user-select: none;
 }
 
+.wheel__container:hover {
+  opacity: 1;
+}
+
 .wheels__title {
     margin: 0px 0px 0px 7vw;
     font-weight: 100;
-  }
+}
 
 .wheel__container--active {
   margin-top: 25vh;
@@ -38,7 +42,7 @@
 
 .wheel__container:hover > .model,
 .wheel__container:hover > .price {
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .model,
@@ -66,8 +70,8 @@
 
 
 @media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px)  {
+and (min-width : 768px) 
+and (max-width : 1024px)  {
   
   .wheels {
     margin: auto;
@@ -84,13 +88,17 @@ and (max-device-width : 1024px)  {
     user-select: none;
   }
 
+  .wheel__container:hover {
+    opacity: 1;
+  }
+
   .wheels__title {
     margin: 0px 0px 0px 15px;
     font-weight: 100;
   }
   
   .wheel__container--active {
-    margin: 25vh 5vw 25vh 5vw;
+    margin: 25vh 8vw 25vh 8vw;
     opacity: 1;
     transition: opacity 0.3s ease-in;
     will-change: opacity;
@@ -107,7 +115,7 @@ and (max-device-width : 1024px)  {
   
   .wheel__container:hover > .model,
   .wheel__container:hover > .price {
-    opacity: 0.5;
+    opacity: 1;
   }
   
   .model,
@@ -137,12 +145,12 @@ and (max-device-width : 1024px)  {
 
 
 @media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 812px) { 
+and (min-width : 375px) 
+and (max-width : 812px) { 
   
   .wheels {
     margin: 70px 0px 30px 0px;
-    width: 390px;
+    width: 400px;
     overflow-x: scroll;
   }
 
@@ -159,14 +167,20 @@ and (max-device-width : 812px) {
   .wheel__container {
     opacity: 0.5;
     transition: opacity 0.3s ease-in;
+    margin: 150px 50px 25px 50px;
     will-change: opacity;
     cursor: pointer;
     user-select: none;
+  }
+
+  .wheel__container:hover {
+    opacity: 1;
   }
   
   .wheel__container--active {
     opacity: 1;
     transition: opacity 0.3s ease-in;
+    margin: 150px 25px 25px 25px;
     will-change: opacity;
     cursor: pointer;
     user-select: none;
@@ -181,7 +195,7 @@ and (max-device-width : 812px) {
   
   .wheel__container:hover > .model,
   .wheel__container:hover > .price {
-    opacity: 0.5;
+    opacity: 1;
   }
   
   .model,

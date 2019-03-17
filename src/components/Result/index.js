@@ -10,7 +10,7 @@ const isIncluded = (value) => {
 const Result = () => {
   return(
     <AppContext.Consumer>
-      {({data, engine, color, wheels, totalValue, updateState}) => (
+      {({data, engine, color, wheels, totalValue, updateState, rebuild}) => (
       <div className={style['Result']}>
         <img className={style['Result__car']} src={data.results.items[color.id].image} alt={color.label}></img>
         <div className={style['Result__infos']}>
@@ -37,17 +37,7 @@ const Result = () => {
             <h2 className={style['label']}>Final Price</h2>
             <h2 className={style['price']}>${totalValue}</h2>
           </div>
-          <h3 onClick={() => updateState({
-            init: false,
-            totalValue: 0,
-            stagingValue: 0,
-            color: {},
-            wheel: {},
-            engine: {},
-            step: "",
-            selected: {step: false, engine: false, color: false, wheels: false},
-            nextStep: ""
-          })} className={style['rebuild']}>REBUILD <img src={rebuildIco} alt={'Rebuild'}/></h3>
+          <h3 onClick={() => rebuild()} className={style['rebuild']}>REBUILD <img src={rebuildIco} alt={'Rebuild'}/></h3>
         </div>
       </div>
       )}

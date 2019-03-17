@@ -13,7 +13,8 @@ export const contextState = {
   selected: {},
   nextStep: "",
   data: null,
-  updateState: ({...states}) => {}
+  updateState: ({...states}) => {},
+  rebuild: () => {}
 }
 
 const AppContext = React.createContext({

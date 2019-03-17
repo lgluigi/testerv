@@ -45,7 +45,7 @@ const Color = () => {
               <div className={isSelected(color, 0) ? style['color__option--active'] : style['color__option']} 
               onClick={() => updateState({
                 color: selectColor(0, data),
-                stagingValue: getColor(color.id, data).price,
+                stagingValue: data.color.items[0].price,
                 selected: {...selected, step: true, color: true},
                 nextStep: 'wheels'
               })}><img src={red}  alt={getColor(0, data).label} /></div>
@@ -53,7 +53,7 @@ const Color = () => {
               <div className={isSelected(color, 1) ? style['color__option--active'] : style['color__option']} 
               onClick={() => updateState({
                 color: selectColor(1, data),
-                stagingValue: getColor(color.id, data).price,
+                stagingValue: data.color.items[1].price,
                 selected: {...selected, step: true, color: true},
                 nextStep: 'wheels',
               })}><img src={blue} alt={getColor(1, data).label} /></div>
@@ -61,7 +61,7 @@ const Color = () => {
               <div className={isSelected(color, 2) ? style['color__option--active'] : style['color__option']} 
               onClick={() => updateState({
                 color: selectColor(2, data),
-                stagingValue: getColor(color.id, data).price,
+                stagingValue: data.color.items[2].price,
                 selected: {...selected, step: true, color: true},
                 nextStep: 'wheels',
               })}><img src={grey} alt={getColor(2, data).label} /></div>

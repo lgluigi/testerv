@@ -11,19 +11,9 @@ const isModel = (model, modelSelected) => {
 const NavBar = () => {
   return(
   <AppContext.Consumer>
-    {({updateState, model}) => (
+    {({updateState, model, rebuild}) => (
       <div className={style['navbar']}>
-        <img onClick={() => updateState({
-        init: false,
-        totalValue: 0,
-        stagingValue: 0,
-        color: {},
-        wheel: {},
-        engine: {},
-        step: "",
-        selected: {step: false, engine: false, color: false, wheels: false},
-        nextStep: ""}
-        )}
+        <img onClick={() => rebuild()}
         className={style['navbar__logo']} src={logo} alt={'Red Ventures logo'} />
         <ul className={style.navbar__ul}>
           <li className={isModel(model, 'modelR') ? style['navbar__btn--active'] : style['navbar__btn']} 

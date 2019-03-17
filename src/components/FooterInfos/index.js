@@ -17,6 +17,7 @@ const FooterInfos = () => {
           <div className={style['price']}>
             <p>Total</p>
             <h1>${totalValue + stagingValue}</h1>
+            {console.log(stagingValue)}
           </div>
           <h3 className={style['model']}>Model R</h3>
           {selected.engine && <h4 className={style['kwh']}>{engine.kwh} 

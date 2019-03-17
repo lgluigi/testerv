@@ -32,6 +32,17 @@ class App extends Component {
 
     updateState = (newState) => this.setState({ ...newState });
 
+    rebuild = () => this.updateState({
+      init: false,
+      totalValue: 0,
+      stagingValue: 0,
+      color: {},
+      wheel: {},
+      engine: {},
+      step: "",
+      selected: {step: false, engine: false, color: false, wheels: false},
+      nextStep: ""});
+
     componentDidMount(){
         axios
           .get('https://next.json-generator.com/api/json/get/41ORKNZDU')
@@ -41,10 +52,11 @@ class App extends Component {
 
     render() {
 
-        const {updateState} = this;
+        const {updateState, rebuild} = this;
         const value = {
           ...this.state,
-          updateState
+          updateState,
+          rebuild
         }
 
         return (
